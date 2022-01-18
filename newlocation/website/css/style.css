@@ -1,0 +1,91 @@
+/* Styles for CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ddd;
+}
+
+header {
+  /* height: 200px; */
+  background: yellow;
+  overflow: hidden; /*why */
+  padding: 20px 0;
+}
+
+#inner-header, 
+#inner-footer {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#logo {
+  float: left;
+  width: 170px;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  float: left;
+  margin-left: 15px;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none
+}
+
+#wrapper {
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+#hero {
+  height: 300px;
+  background: #f00;
+  margin-bottom: 20px;
+  clear:both;
+}
+
+main {
+  width: 63%;
+  /* height: 400px; */
+  padding: 5px;
+  background: lightblue;
+  margin-bottom: 20px;
+  float: left;
+}
+
+aside {
+  width: 35%;
+  padding: 5px;
+  background: coral;
+  float: right;
+}
+
+#footer-clear {
+  clear: both;
+}
+
+footer {
+  border-top: 1px solid #666;
+  background: #666;
+  height: 50px;
+  line-height: 50px; /* center vertically */
+}
+
+footer li {
+  float:left;
+  margin-right: 30px;
+  list-style-type: none;
+
+  /* vertically center*/
+  /* height: 50px; */
+  /* line-height: 50px; */
+}
