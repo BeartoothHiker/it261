@@ -18,12 +18,13 @@ header {
 
 #inner-header, 
 #inner-footer {
-  margin:0 auto;
+  margin: 0 auto;
   max-width: 1200px;
 }
 
 #logo {
-  float:left;
+  float: left;
+  width: 170px;
 }
 
 nav ul {
@@ -41,7 +42,7 @@ nav a {
 }
 
 #wrapper {
-  margin:20px auto;
+  margin: 20px auto;
   max-width: 1200px;
 }
 
@@ -53,8 +54,9 @@ nav a {
 }
 
 main {
-  width: 62%;
-  height: 400px;
+  width: 63%;
+  /* height: 400px; */
+  padding: 5px;
   background: lightblue;
   margin-bottom: 20px;
   float: left;
@@ -62,7 +64,7 @@ main {
 
 aside {
   width: 35%;
-  height: 300px;
+  padding: 5px;
   background: coral;
   float: right;
 }
@@ -73,7 +75,7 @@ aside {
 
 footer {
   border-top: 1px solid #666;
-  //background: #666;
+  background: #666;
   height: 50px;
   line-height: 50px; /* center vertically */
 }
