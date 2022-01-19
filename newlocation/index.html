@@ -22,17 +22,33 @@
 
   <div id="content-wrapper">
     <main>
-      <h1>Jeremy Robinson IT-261 Portal Page</h1>
-      <!-- In the main container, after a paragraph about yourselves you will display your Mamp screehsots -->
-      <p>
-        Lorem Ipsum
-      </p>
+      <h1>Jeremy Robinson IT-261 Portal Page: Winter2022</h1>
+      <!-- In the main contdirainer, after a paragraph about yourselves you will display your Mamp screehsots -->
+      <div>
+        <img id="profile-img" src="images/jeremy-and-o.jpg" alt="profile picture">
+        <p>
+          I am father, husband, and personal concierge for my wacky standard poodle. I have been working in and science and technology, and I want to knock off some of the rust in web development. I am studying modern web technologies in the Seattle Central IT program.
+        </p>
+      </div>
+      <h2></h2>
+      <article ID="mamp-install">
+        <div>
+          <img class="mamp-image" alt="MAMP install" src="images/mamp-install.png">
+        </div>
+        <div>
+          <p>
+            I installed MAMP locally on my PC, and I updated the preferences so that the 'document root' is in my local GitHub repository root (not 'htaccess').
+          </p>
+          <img class="mamp-image" alt="MAMP directory"src="images/mamp-directory-250.png">
+          <img class="mamp-image"alt="PHP error" src="images/php-error.png">
+        </div>
+      </article> <!-- end mamp-install -->
     </main>
 
     <aside>
       <h3>Weekly Assignments</h3>
     </aside>
-  </div>
+  </div> <!-- end content-wrapper -->
 
   <div id="footer-clear"></div>
   <footer>
@@ -49,7 +65,7 @@
 
   <script>
     document.getElementById("html-validator").setAttribute("href", "https://validator.w3.org/nu/?doc=" + location.href);
-    document.getElementById("cs-validator").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getElementById("css-validator").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
   </script></div> <!-- end wrapper -->
 </body>
 </html>

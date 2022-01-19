@@ -19,16 +19,15 @@ body {
   max-width: 1200px;
 }
 
-#xx-content-wrapper {
-  max-width: 800px;
-  background-color:darkgoldenrod;
-  border-color: red;
-  min-height: 100px;
+#content-wrapper {
+  background-color:lightskyblue;
+  border: 2px red solid;
+  height: 600px;
 }
 
 nav {
   height: 50px;
-  background: chartreuse;
+  background: lightsteelblue;
   line-height: 50px;
 }
 
@@ -42,11 +41,13 @@ nav li {
 main {
   width: 63%;
   float: left;
+  border: 2px green solid;
 }
 
 aside {
   width: 35%;
   float: right;
+  border: 2px blue solid;
 }
 
 footer {
@@ -57,4 +58,25 @@ footer li {
   float: left;
   margin-right: 30px;
   list-style-type: none;
+}
+
+main div {
+  margin-bottom: 10px;
+  border: 2px black dashed;
+}
+
+#mamp-install {
+  border: 2px red solid;
+}
+
+.mamp-image {
+  display: block;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#profile-img {
+  border-radius: 40%;
+  width: 160px;
 }
