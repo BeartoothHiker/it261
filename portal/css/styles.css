@@ -67,7 +67,10 @@ footer li {
 }
 
 #profile-img {
-  border-radius: 40%;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 45%;
+  border-bottom-left-radius: 5% ;
   width: 160px;
 }
 
