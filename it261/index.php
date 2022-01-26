@@ -22,13 +22,10 @@
 
   <div id="content-wrapper">
     <main>
-      <hgroup>
-        <h1>Jeremy Robinson</h1>
-        <h3>IT261 Portal Page: Winter 2022</h3>
-      </hgroup>
-
+      <h1>Jeremy's Portal Page</h1>
+      <h3>IT261 Winter 2022</h3>
       <div>
-        <img id="profile-img" src="images/jeremy-and-o.jpg" alt="profile picture">
+        <img id="profile-img" src="images/jeremy-and-o.jpg" alt="Jeremy's profile picture">
         <p>
           I am father, husband, and personal concierge for my wacky standard poodle mix. I have been working in science and technology for quite awhile, and I want to knock off some of the rust in web development. I am studying modern web technologies in the Seattle Central IT program.
         </p>
