@@ -21,7 +21,7 @@ switch(THIS_PAGE) {
 <head>
   <!-- what do we do here with homepage -->
   <title><?php echo $title ?></title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body class="<?php ?>">
