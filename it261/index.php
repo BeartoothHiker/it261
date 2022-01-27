@@ -22,18 +22,27 @@
 
   <div id="content-wrapper">
     <main>
-      <h1>Jeremy's Portal Page</h1>
-      <h3>IT261 Winter 2022</h3>
+      <h2>Jeremy's Portal Page</h2>
       <div>
-        <img id="profile-img" src="images/jeremy-and-o.jpg" alt="Jeremy's profile picture">
+        <!-- need to play some games to get these side by side -->
+        <span>
+          <img id="profile-img" src="images/jeremy-and-o.jpg" alt="Jeremy's profile picture">
+        <span>
+        <span>
+        <h3>IT261 Winter 2022</h3>
+        </span>
+      </div>
+      <h3>About Me</h3>
+      <div>
         <p>
           I am father, husband, and personal concierge for my wacky standard poodle mix. I have been working in science and technology for quite awhile, and I want to knock off some of the rust in web development. I am studying modern web technologies in the Seattle Central IT program.
         </p>
       </div>
-      <h2></h2>
+      <h2>MAMP Installation</h2>
       <div>
         <img class="mamp-image" alt="MAMP install" src="images/mamp-install.png">
       </div>
+      <h4>Custom MAMP root folder:</h4>
       <div>
         <p>
           I installed MAMP locally on my PC, and I updated the preferences so that the 'document root' is in my local GitHub repository root (not 'htaccess').
@@ -41,6 +50,7 @@
       <div>
         <img class="mamp-image" alt="MAMP directory" src="images/mamp-directory-250.png">
       </div>
+      <h4>Verify MAMP Errors work:</h4>
       <div>
         <img class="mamp-image"alt="PHP error" src="images/php-error.png">
       </div>

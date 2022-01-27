@@ -1,7 +1,9 @@
   <footer>
     <div id="inner-footer">
       <ul>
-        <li>Copyright &copy;</li>
+        <li>Copyright &copy;
+          <?php echo date('Y'); ?>
+        </li>
         <li>All Rights Reserved</li>
         <li><a href="../index/php">Web Design By Me</a></li>
         <li><a id="html-validator" href="#">HTML Validation</a></li>
