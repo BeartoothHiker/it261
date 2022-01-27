@@ -5,7 +5,7 @@
           <?php echo date('Y'); ?>
         </li>
         <li>All Rights Reserved</li>
-        <li><a href="../index/php">Web Design By Me</a></li>
+        <li><a href="../index.php">Web Design By Me</a></li>
         <li><a id="html-validator" href="#">HTML Validation</a></li>
         <li><a id="css-validator" href="#">CSS Validation</a></li>
       </ul>
