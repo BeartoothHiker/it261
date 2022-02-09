@@ -22,6 +22,12 @@ header {
   max-width: 1200px;
 }
 
+/* Style for current item on Page navigation menu */
+.current {
+  color: red;
+}
+
+
 #logo {
   float: left;
   width: 170px;

@@ -10,8 +10,15 @@
   display: flow-root;  
 }
 
+:root {
+  --cerulean: #4484ce;
+  --aluminum: #d9d9d9;
+  --light: #f9cf00;
+  --tangerine: #f19f4d;
+}  
+
 body {
-  background: beige;
+  background: var(--aluminum);
 }
 
 #wrapper {
@@ -21,7 +28,7 @@ body {
 }
 
 #content-wrapper {
-  background-color:lightskyblue;
+  background-color:var(--cerulean);
 }
 
 nav {
@@ -53,6 +60,7 @@ aside {
   width: 35%;
   float: right;
   margin:20px 0;
+  background-color: var(--tangerine);
 }
 aside h4 {
   margin-top: 3px;

@@ -12,6 +12,27 @@ switch(THIS_PAGE) {
     $title = 'JeremyRo\'s Daily Page';
     $body_class = 'daily inner'; // class
     break;
+
+  case 'about.php':
+    $title = 'JeremyRo\'s About Page';
+    $body_class = 'about inner'; // class
+    break;
+
+  case 'project.php':
+    $title = 'JeremyRo\'s Project Page';
+    $body_class = 'project inner'; // class
+    break;
+
+  case 'contact.php':
+    $title = 'JeremyRo\'s Contact Page';
+    $body_class = 'contact inner'; // class
+    break;
+
+  case 'gallery.php':
+    $title = 'JeremyRo\'s Gallery';
+    $body_class = 'gallery inner'; // class
+    break;
+
 }
 
 //Associative Array $nav
@@ -52,15 +73,32 @@ $nav['gallery.php'] = 'Gallery';
       </nav>
 -->
 
+
+      <nav>
+        <ul>
+<?php
+
+foreach ($nav as $key => $value) {
+  //if ('project.php' == $key) {    // for testing
+  if (THIS_PAGE == $key) {
+    echo '<li><a class="current href="'.$key.'"> '.$value.'</a></li>';
+  } else {
+    echo '<li><a href="'.$key.'"> '.$value.'</a></li>';
+  }
+}   // end foreach
+?>
+        </ul>
+      </nav>
+<!-- 
       <nav>
         <ul>
 <?php
 foreach ($nav as $key => $value) {
-  echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;" href="'.$key.'"> '.$value.'</a></li>';
+  // echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;" href="'.$key.'"> '.$value.'</a></li>';
 }
 ?>
         </ul>
       </nav>
-
+ -->
     </div> <!-- end inner-header -->
   </header>
