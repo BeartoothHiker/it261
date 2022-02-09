@@ -27,9 +27,7 @@
         <!-- need to play some games to get these side by side -->
         <span>
           <img id="profile-img" src="images/jeremy-and-o.jpg" alt="Jeremy's profile picture">
-        <span>
-        <span>
-        <h3>IT261 Winter 2022</h3>
+          <h3>IT261 Winter 2022</h3>
         </span>
       </div>
       <h3>About Me</h3>

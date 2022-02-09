@@ -1,5 +1,10 @@
-<?php
+ <?php
   // we have travelled the world that we need to exchange
+  // 
+  // Unit of Currency |  US$ 
+  // CAD$ 1.00 = US$ 0.80
+  // Rubles 1.00 = US$ 0.013
+         
   // $CAD - $USD  - CAD$ 1.00 = USD$0.80
   // Rubles - $USD 0.013 
   // Brit Pounds - $USD - 1.37

@@ -13,6 +13,16 @@ switch(THIS_PAGE) {
     $body_class = 'daily inner'; // class
     break;
 }
+
+//Associative Array $nav
+// $nav: $key --> $value
+$nav['index.php'] = 'Index';
+$nav['about.php'] = 'About';
+$nav['daily.php'] = 'Daily';
+$nav['project.php'] = 'Project';
+$nav['contact.php'] = 'Contact';
+$nav['gallery.php'] = 'Gallery';
+
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +40,7 @@ switch(THIS_PAGE) {
       <a href="index.php">
         <img id="logo" src="images/New-Mooney-Logo-Flipped.png" alt="Mooney Logo">
       </a>
+<!--
       <nav>
         <ul>
           <li><a href="index.php">Home</a></li>
@@ -39,25 +50,17 @@ switch(THIS_PAGE) {
           <li><a href="gallery.php">Gallery</a></li>
         </ul>
       </nav>
-<!--
-
-foreach ($nav as $key => $value) {
-
-  #TODO:  build menu using PHP 
-
-  echo '<a href="'.$key.'"> '.$value.'</a><br>';
-}
-echo "<br>";
-?>
-
-<nav>
-<ul>
-
-<?php /*echo '<li style="list-style-type:none;"><a style="text-decoration:none; color=red' ... ?*/ ?>
-
-
-</ul>
-</nav>        
 -->
+
+      <nav>
+        <ul>
+<?php
+foreach ($nav as $key => $value) {
+  echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;" href="'.$key.'"> '.$value.'</a></li>';
+}
+?>
+        </ul>
+      </nav>
+
     </div> <!-- end inner-header -->
   </header>

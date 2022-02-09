@@ -23,7 +23,7 @@
   echo '<br>';
 
   $body_temp = 98.6;
-  echo 'The temperature today is/was ' .$temp. 'degrees.';
+  echo 'The temperature today is/was ' .$body_temp. 'degrees.';
 
   $body_temp = 98.6;
   // anything with a decimal is called a float
@@ -32,8 +32,15 @@
   // another data type is boolean --> true or false
   // another data type is NULL
 
+  // In HTML we ahd option for '<select></select>
+  // <select>
+  //   <option value="" NULL>Select one</option>  // which means we cannot select this 
+  // </select>
+
+  // strings
   $vehicle = 'truck';
   
+  // numbers & arithmetic
   $x = 20;
   $y = 30;
   $z = $x * $y;
@@ -48,29 +55,19 @@
   echo '<br>';
 
   // Make an error (for assignment, comment this out)
-  //$celcius = 4;
-  $far = (32 + $celcius * 9 / 5);
-  echo 'The temperature is ' . ceil($far) . 'degrees farenheit';
-  
-  // $friendly_far = ceil($far);
-  // echo 'The temperature is ' . $frendly_far . 'degrees farenheit';
-  // echo '<br>';
+  $celcius = 4;
+  $far = 32 + ($celcius * 9 / 5);
+  $friendly_far = ceil($far); // ceil - rounds up, floor rounds down
+  echo 'The temperature is ' . $friendly_far . ' degrees farenheit ';
+  echo '<br>';
 
-  $money = 100;
-  $divide = 7;
-  $amount = $money / $divde;
-  echo $amount;
-  // $friendly_amount = number_format($amout, 2);
-  // echo $friendly_amount;
+  $money = 10330;
+  $divide = 71;
+  $amount = $money / $divide;
+  $friendly_amount = number_format($amount, 2);
+  echo '<p>The calculated amount is: $' . $amount . " - And friendly num is $". $friendly_amount . "</p>";
 
   // number_format(var, places)
-  $echo '<p>I now have <b>' . number_format($amount, 2) . '</b> dollars!</p>';
-  $echo '<br>';
-
-
-
-
-
-
-
-                              
+  echo '<p>I now have <b>' . number_format($amount, 2) . '</b> dollars!</p><br>';
+  echo '<br>';
+  echo 'Bye!';

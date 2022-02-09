@@ -1,4 +1,8 @@
 <?php
+
+// define a constant
+define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
+
 // arrays reminds Olga of a category, catetory of fruits, names, addresses ...
 // ... or how about navigation elements on your site?
 
@@ -109,26 +113,38 @@ echo '<br>';
 </ul>
 </nav>
 
+<!-- rework styles to use CSS file -->
 
+<!--  If we are on HOME page on our website, HOME will display differently 
+if we are on THIS_PAGE (see above) we will be styling for this page.
+
+if THIS_PAGE == key
+-->
+<html>
+  <head>
+    <style>
+      .current {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
 
 <nav>
 <ul>
 <?php
-// Don't really need to re-generate this list, I did for some reason I don't understand
-// I think this was here because I didn't understand what we were doing in class
-// I figured out my mistake after going back to the video
-$nav['index.php'] = 'Index';
-$nav['about.php'] = 'About';
-$nav['daily.php'] = 'Daily';
-$nav['project.php'] = 'Project';
-$nav['contact.php'] = 'Contact';
-$nav['gallery.php'] = 'Gallery';
 
-
-
-echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;">FooBar</a>' // ... (get from video)
+foreach ($nav as $key => $value) {
+  //if ('project.php' == $key) {    // for testing
+  if (THIS_PAGE == $key) {
+    echo '<li><a class="current xyz" href="'.$key.'"> '.$value.'</a></li>';
+  } else {
+    echo '<li><a class="xyz" href="'.$key.'"> '.$value.'</a></li>';
+  }
+}   // end foreach
 ?>
-
 </ul>
 </nav>
 
+  </body>
+</html>
