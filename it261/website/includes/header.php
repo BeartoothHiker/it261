@@ -77,11 +77,10 @@ $nav['gallery.php'] = 'Gallery';
       <nav>
         <ul>
 <?php
-
 foreach ($nav as $key => $value) {
   //if ('project.php' == $key) {    // for testing
   if (THIS_PAGE == $key) {
-    echo '<li><a class="current href="'.$key.'"> '.$value.'</a></li>';
+    echo '<li><a class="current" href="'.$key.'"> '.$value.'</a></li>';
   } else {
     echo '<li><a href="'.$key.'"> '.$value.'</a></li>';
   }
@@ -89,16 +88,5 @@ foreach ($nav as $key => $value) {
 ?>
         </ul>
       </nav>
-<!-- 
-      <nav>
-        <ul>
-<?php
-foreach ($nav as $key => $value) {
-  // echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;" href="'.$key.'"> '.$value.'</a></li>';
-}
-?>
-        </ul>
-      </nav>
- -->
     </div> <!-- end inner-header -->
   </header>
