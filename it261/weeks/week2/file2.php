@@ -1,9 +1,9 @@
 
 <?php
 // Which Exercise is this?  Forgot the name.
-// the logic if I do not enter anything inside the input field, somehting will show up
+// the logic if I do not enter anything inside the input field, something will show up
 
-if (isset( $_POST['first_name'],
+if (isset( $_POST['first_name'], 
             $_POST['last_name'],
             $_POST['email'],
             $_POST['comments']) )
