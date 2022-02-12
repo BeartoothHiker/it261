@@ -93,6 +93,7 @@
   <script>
     document.getElementById("html-validator").setAttribute("href", "https://validator.w3.org/nu/?doc=" + location.href);
     document.getElementById("css-validator").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-  </script></div> <!-- end wrapper -->
+  </script>
+</div> <!-- end wrapper -->
 </body>
 </html>
