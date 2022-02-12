@@ -12,7 +12,7 @@
   <nav>
     <ul>
       <li><a href="">Switch</a></li>
-      <li><a href="">Troubleshoot</a></li>
+      <li><a href="./website/adder.php">Troubleshoot</a></li>
       <li><a href="">Calculator</a></li>
       <li><a href="">Email</a></li>
       <li><a href="">Database</a></li>

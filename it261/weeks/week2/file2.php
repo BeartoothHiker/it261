@@ -1,5 +1,6 @@
 
 <?php
+// Which Exercise is this?  Forgot the name.
 // the logic if I do not enter anything inside the input field, somehting will show up
 
 if (isset( $_POST['first_name'],
@@ -53,6 +54,7 @@ echo '
 <input type="submit" value="confirm">
 
 <p><a href="">Reset</a></p>
+</form>
 ';
 
 }
