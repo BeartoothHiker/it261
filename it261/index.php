@@ -65,6 +65,7 @@
       <ul>
         <li><a href="./weeks/week3/arrays.php">Arrays</a></li>
         <li><a href="./weeks/week3/date.php">Date</a></li>
+        <li><a href="./weeks/week3/for-loop.php">For-Loop</a></li>
         <li><a href="./weeks/week3/if-else.php">If-Else</a></li>
         <li><a href="./weeks/week3/switch.php">Switch</a></li>
       </ul>
