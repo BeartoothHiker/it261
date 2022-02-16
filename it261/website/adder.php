@@ -1,3 +1,16 @@
+<html lang="en">
+<head>
+<title>My Adder Assignment</title>
+<style>
+</style>
+</head>
+
+<body>
+<h1>Adder.php</h1><form action="" method="post">
+<label>Enter the first number:</label><input type="number" name="num1"><br>
+<label>Enter the second number:</label><input type="number" name="num2"><br>
+<input type="submit" value="Add Em!!"> </form>
+
 <?php //adder-wrong.php
 
 if (isset($_POST['num1'], $_POST['num2'])){
@@ -14,17 +27,6 @@ if (isset($_POST['num1'], $_POST['num2'])){
   }
 }?>
 
-<html>
-<head>
-<title>My Adder Assignment</title>
-<style>
-</style>
-</head>
-<body>
-<h1>Adder.php</h1><form action="" method="post">
-<label>Enter the first number:</label><input type="number" name="num1"><br>
-<label>Enter the second number:</label><input type="number" name="num2"><br>
-<input type="submit" value="Add Em!!"> </form>
 
 <!--  ERRORS: -->
 <!-- Line 1: Syntax: need space between opening PHP marker (< ?php) and comment -->
