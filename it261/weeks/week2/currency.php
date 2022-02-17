@@ -102,40 +102,6 @@
     </tr>
   </table>  
 
-  <h2>Table 2</h2>
-  <table>
-    <tr>
-      <th>Currency</th>
-      <th>Amount</th>
-      <th>US Dollars</th>
-    </tr>
-    <tr>
-      <td>Canadian Dollars</td>
-      <td><?php echo '<i>' . number_format($for_amount, 0) . '</i>'; ?></td>
-      <td><?php echo '<i>$' . number_format($candian_us, 2) . '</i>'; ?></td>
-    </tr>
-    <tr>
-      <td>Russian Rubles</td>
-      <td><?php echo '<i>' . number_format($for_amount, 0) . '</i>'; ?></td>
-      <td><?php echo '<i>$' . number_format($rubles_us, 2) . '</i>'; ?></td>
-    </tr>
-    <tr>
-      <td>British Pounds</td>
-      <td><?php echo '<i>' . number_format($for_amount, 0) . '</i>'; ?></td>
-      <td><?php echo '<i>$' . number_format($pounds_us, 2) . '</i>'; ?></td>
-    </tr>
-    <tr>
-    <td>Euros</td>
-      <td><?php echo '<i>' . number_format($for_amount, 0) . '</i>'; ?></td>
-      <td><?php echo '<i>$' . number_format($euros_us, 2) . '</i>'; ?></td>
-    </tr>
-    <tr>
-    <td>Japanese Yen</td>
-      <td><?php echo '<i>' . number_format($for_amount, 0) . '</i>'; ?></td>
-      <td><?php echo '<i>$' . number_format($yen_us, 2) . '</i>'; ?></td>
-    </tr>
-  </table>
-
 </body>
 </html>
 
