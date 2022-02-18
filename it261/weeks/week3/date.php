@@ -14,7 +14,7 @@ echo '<br>' . date('l F j, Y, h:i A');  // notice that time isn't same as my loc
 echo '<br>' . "GMT " . date("l");
 echo '<br>' . "GMT " . date('l F j, Y, h:i A');;
 
-// set timezoned
+// set timezone
 date_default_timezone_set('America/Los_Angeles');
 
 echo '<br>' . "PST" . date("l") ;

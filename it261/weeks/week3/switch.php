@@ -24,32 +24,46 @@ echo 'Not!';
 if (isset($_GET['today'])) {
   $today = $_GET['today'];
 } else {
+  date_default_timezone_set('America/Los_Angeles');
   $today = date('l');
 }
 
-// switch
-
 echo '<br>' . $today;
 
-switch ($today) {
+// switch
+$coffee = 'a Tea';
 
-  case  'Thursday':
-    $coffee = '<h2>' . $today . ' is Pumpkin Latte Day</h2>';
-    break;
-  
-case  'Wednesday':
-  $coffee = '<h2>' . $today . ' is Americano Day</h2>';
+switch ($today) {
+case 'Saturday':
+  $coffee = 'Bloody Mary';
+  break;
+
+case  'Thursday':
+  $coffee = 'Pumpkin Latte';
   break;
   
 case  'Wednesday':
-  $coffee = '<h2>' . $today . ' is Regular Joe Day</h2>';
+  $coffee = 'Americano';
+  break;
+  
+case  'Tuesday':
+  $coffee = 'Regular Joe';
+  break;
+
+case 'Monday':
+  $coffee = 'Triple Shot Espresso';
+  break;
+
+case 'Sunday':
+  $coffee = 'Mimosa';
   break;
 
 default:
-  $coffee = '<h2> I didn\'t remember today.';
+  $coffee = 'a Tea';
 }
 
-echo '<br>' . $coffee . '<br>';
+echo '<br><h2>' . $today. ' is ' . $coffee . ' Day'. '</h2><br>';
+
 ?>
 
 <!-- 

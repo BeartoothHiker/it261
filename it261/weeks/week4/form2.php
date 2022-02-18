@@ -54,6 +54,7 @@ echo '
 <input type="submit" value="confirm">
 
 <p><a href="">Reset</a></p>
+</form>
 </div>
 ';
 
