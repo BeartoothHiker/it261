@@ -50,7 +50,7 @@ yen = 0.0087;
 
 <option value="becu" <?php  if(isset($_POST['bank']) && $_POST['bank'] == 'becu') echo 'selected = selected' ?> >BECU</option>
 
-<option value="wells fargo" <?php  if(isset($_POST['bank']) && $_POST['bank'] == 'becu') echo 'selected = selected' ?> >BECU</option>
+<option value="wells fargo" <?php  if(isset($_POST['bank']) && $_POST['bank'] == 'wells fargo') echo 'selected = selected' ?> >Wells Fargo</option>
 
 </select>
 
