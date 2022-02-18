@@ -55,12 +55,16 @@
       <h3>Weekly Assignments</h3>
       <h4>Week2</h4>
       <ul>
-        <li><a href="./weeks/week2/currency-logic.php">CurrencyLogic</a></li>
+        <li><a href="./weeks/week2/currency-class.php">Currency</a></li>
+        <li><a href="./weeks/week2/currency.php">Currency (modified)</a></li>
+        <li><a href="./weeks/week2/currency-logic.php">Currency Logic</a></li>
+        <li><a href="./weeks/week2/heredoc.php">CurrencyLogic</a></li>
         <li><a href="./weeks/week2/var.php">Var</a></li>
       </ul>
       <h4>Week3</h4>
       <ul>
         <li><a href="./weeks/week3/arrays.php">Arrays</a></li>
+        <li><a href="./weeks/week3/arrays-for-nav.php">Arrays (for Nav)</a></li>
         <li><a href="./weeks/week3/date.php">Date</a></li>
         <li><a href="./weeks/week3/for-loop.php">For-Loop</a></li>
         <li><a href="./weeks/week3/if-else.php">If-Else</a></li>
@@ -68,9 +72,24 @@
       </ul>
       <h4>Week4</h4>
       <ul>
-        <li>Placeholder</li>
+        <li><a href="./weeks/week4/form1.php">Form 1</a></li>
+        <li><a href="./weeks/week4/form2.php">Form 2</a></li>
+        <li><a href="./weeks/week4/form3.php">Form 3</a></li>
+        <li><a href="./weeks/week4/variable-scope.php">Variable Scope</a></li>
       </ul>
       <h4>Week5</h4>
+      <ul>
+        <li><a href="./weeks/week5/currency.php">Currency</a></li>
+      </ul>
+      <h4>Week6</h4>
+      <ul>
+        <li>Placeholder</li>
+      </ul>
+      <h4>Week7</h4>
+      <ul>
+        <li><a href="./weeks/week7/random.php">Currency</a></li>
+      </ul>
+      <h4>Week8</h4>
       <ul>
         <li>Placeholder</li>
       </ul>
@@ -81,7 +100,7 @@
   <footer>
     <div id="inner-footer">
       <ul>
-        <li>Copyright &copy;</li>
+        <li>Copyright &copy; 2022</li>
         <li>All Rights Reserved</li>
         <li><a href="./website/index.php">Web Design By Me</a></li>
         <li><a id="html-validator" href="#">HTML Validation</a></li>
