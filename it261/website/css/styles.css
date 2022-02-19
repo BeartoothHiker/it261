@@ -48,9 +48,19 @@ nav a {
   text-decoration: none
 }
 
+#wrapper-buffer {
+  margin: 20px auto 0;
+}
+
 #wrapper {
-  margin: 20px auto;
-  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1100px;
+  min-height: 100%;
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+.listWrapper {
+  margin: 10px 20px;
 }
 
 #hero {
@@ -81,9 +91,10 @@ aside {
 }
 
 footer {
-  border-top: 1px solid #666;
-  background: #666;
-  height: 50px;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #444;
+  background: #bbb;
+  height: 80px;
   line-height: 50px; /* center vertically */
 }
 
@@ -91,8 +102,31 @@ footer li {
   float:left;
   margin-right: 30px;
   list-style-type: none;
+}
 
-  /* vertically center*/
-  /* height: 50px; */
-  /* line-height: 50px; */
+/* Daily Image styles */
+
+.daily-image {
+  max-width: 600px;
+}
+
+.daily-detail {
+  max-width: 600px;
+}
+.daily-image-title {
+  text-align: right;
+}
+
+.daily-wrapper {
+  margin: 10px 0;
+}
+
+.daily-menu-class ul {
+  float: left;
+}
+
+.daily-menu-class li {
+  float: left;
+  margin-right: 30px;
+  list-style-type: none;
 }

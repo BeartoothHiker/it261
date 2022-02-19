@@ -37,7 +37,7 @@ switch(THIS_PAGE) {
 
 //Associative Array $nav
 // $nav: $key --> $value
-$nav['index.php'] = 'Index';
+$nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
 $nav['daily.php'] = 'Daily';
 $nav['project.php'] = 'Project';
@@ -61,18 +61,6 @@ $nav['gallery.php'] = 'Gallery';
       <a href="index.php">
         <img id="logo" src="images/New-Mooney-Logo-Flipped.png" alt="Mooney Logo">
       </a>
-<!--
-      <nav>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="daily.php">Daily</a></li>
-          <li><a href="contact.php">Contact</a></li>
-          <li><a href="gallery.php">Gallery</a></li>
-        </ul>
-      </nav>
--->
-
 
       <nav>
         <ul>
