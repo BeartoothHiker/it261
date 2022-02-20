@@ -148,8 +148,8 @@ case 'Socata':
     </div> <!-- end daily-detail -->
 
     <div class="daily-menu">
-      <ul class="daily-wrapper">
       <h3>Want to see the Daily Menu?</h3>
+      <ul>
 
 <?php // List of daily links
 foreach ($weekly_items as $key => $value) {
@@ -164,7 +164,7 @@ foreach ($weekly_items as $key => $value) {
 
 } // end foreach
 ?>  
-      </ul> <!-- end daily-wrapper class -->
+      </ul> 
     </div> <!-- end daily-menu class -->
   </div> <!-- end wrapper -->
 

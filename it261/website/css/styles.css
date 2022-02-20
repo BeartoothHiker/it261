@@ -125,7 +125,7 @@ footer li {
   margin: 20px 5px 20px;
 }
 
-.daily-wrapper {
+.daily-menu {
   margin: 10px 0;
 }
 
@@ -166,10 +166,5 @@ footer li {
 
 .swift {
   background:#353;
-  color:beige;
-}
-
-.Gimli, .Gimli aside, .Gimli main{
-  background:#553333;
   color:beige;
 }
