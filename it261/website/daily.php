@@ -34,25 +34,25 @@ case 'Swift':
     'image' => './images/globe-swift-flight-800-500.jpg',
     'image-alt' => 'swift airplane',
     'seats' => '2',
-    'cruise' => '155 knots (178 mph)',
-    'fuel-burn' => '10 gallons/hour',
+    'cruise' => '134 knots (154 mph)',
+    'fuel-burn' => '9 gallons/hour',
     'range' => '900 nautical miles',
-    'description' => 'small, fast, ...',
+    'description' => 'The Swift is often called the personal Mustang with its polished alumuminum finish and nose high stance. If you want to look fast while sitting still, the Swift is a good choice.',
     'credit' => ''
   );
   break;
 
 case  'Mooney':
   $aircraft_info = array(
-    'type' => 'Mooney M20/J',
+    'type' => 'Mooney M20/J *',
     'image' => './images/mooney201-800-500.jpg',
     'image-alt' => 'mooney airplane',
     'seats' => '4',
     'cruise' => '155 knots (178 mph)',
-    'fuel-burn' => '10 gallons/hour',
+    'fuel-burn' => '9 gallons/hour',
     'range' => '900 nautical miles',
-    'description' => 'The M20/J is a well balanced airplane.  It can carry 4 adults and bags 400 nautical miles in under 3 hours.  With 2 people and full fuel the ragne extends to over 900 nm.',
-    'credit' => ''
+    'description' => 'The M20/J is a well balanced airplane.  It can carry 4 adults and luggage a bit over 400 nautical miles in under 3 hours.  With 3 people and full fuel, its range extends to over 900 nm.',
+    'credit' => '*[Picture by Charles Foisie]'
   );
   break;
   
@@ -65,21 +65,21 @@ case  'Taylorcraft':
     'cruise' => '80 knots (92 mph)',
     'fuel-burn' => '4.5 gallons/hour',
     'range' => '300 nautical miles',
-    'description' => 'Two seat light airplane that is fun to fly when you\'re not in a hurry to get anywhere specific.',
+    'description' => 'Two seat light airplane that is fun to fly when you\'re not in a hurry to get anywhere specific. The Taylorcraft is similar to the Piper Cub, but pilot and passnger sit next to each other.',
     'credit' => ''
   );
   break;
   
 case  'Waco':
   $aircraft_info = array(
-    'type' => 'Waco XXX',
+    'type' => 'Waco YMF-5',
     'image' => './images/waco-biplane-flight.jpg',
     'image-alt' => 'waco airplane',
     'seats' => '2',
-    'cruise' => '95 knots (109 mph)',
-    'fuel-burn' => '5 gallons/hour',
+    'cruise' => '100 knots (115 mph)',
+    'fuel-burn' => '14 gallons/hour',
     'range' => '300 nautical miles',
-    'description' => 'Open cockpit 2-seat tandem seating',
+    'description' => 'The Waco YMF-5 is a classic open cockpit biplane whose design dates to the 1930\'s. This airplane is for the pilot (or passenger) who wants to experience flying low and slow and reaching their hand in the slipstream.',
     'credit' => ''
   );
   break;
