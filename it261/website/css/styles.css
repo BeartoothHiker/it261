@@ -59,7 +59,12 @@ nav a {
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
-.listWrapper {
+.daily-detail h1 {
+  padding: 10px 10px 5px;
+}
+
+.detail-wrapper {
+  padding: 5px 5px;
   margin: 10px 20px;
 }
 
@@ -117,7 +122,7 @@ footer li {
   text-align: right;
 }
 .item-credit {
-  margin: 0 0 20px;
+  margin: 20px 5px 20px;
 }
 
 .daily-wrapper {
@@ -132,4 +137,39 @@ footer li {
   float: left;
   margin-right: 30px;
   list-style-type: none;
+}
+
+.socata {
+  background:#779977;
+  color:beige;
+}
+
+.mooney {
+  background:#b97;
+  color:beige;
+}
+
+.fairchild {
+  background:#cc3d3d;
+  color:beige;
+}
+
+.waco {
+  background:#993333;
+  color:beige;
+}
+
+.thorp {
+  background:#579;
+  color:beige;
+}
+
+.swift {
+  background:#353;
+  color:beige;
+}
+
+.Gimli, .Gimli aside, .Gimli main{
+  background:#553333;
+  color:beige;
 }

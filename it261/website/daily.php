@@ -25,6 +25,9 @@ $weekly_items = array(
 
 $aircraft_make = $weekly_items[$today];
 
+
+$daily_color = $weekly_items[$today];
+
 // Third, fill out $aircraft_info based on $aircraft_make
 
 switch ($aircraft_make) {
@@ -129,24 +132,24 @@ case 'Socata':
 ?>
 
   <div id="wrapper">
-    <h1><?php echo $today. ' is ' . $aircraft_make . ' Day'; ?></h1>
-    <div class="daily-detail">
-
+    <div class="daily-detail <?php echo strtolower($aircraft_make) ?>">
+      <h1><?php echo $today. ' is ' . $aircraft_make . ' Day'; ?></h1>
       <img class="daily-image" <?php echo 'src="' . $aircraft_info['image'] . '" alt="' . $aircraft_info['image-alt'] . '"'; ?> >
-      <h3 class="daily-image-title"><?php echo $aircraft_info['type']; ?></h3>
-      <ul class="listWrapper">
-        <li>Seats: <?php echo $aircraft_info['seats']; ?></li>
-        <li>Cruise Speed: <?php echo $aircraft_info['cruise']; ?></li>
-        <li>Fuel Burn: <?php echo $aircraft_info['fuel-burn']; ?></li>
-        <li>Description: <?php echo $aircraft_info['description']; ?></li>
-      </ul> <!-- end listWrapper -->
-      <p class="listWrapper item-credit"><?php echo $aircraft_info['credit']; ?></p>
-
+      <div class="detail-wrapper">
+        <h3 class="daily-image-title"><?php echo $aircraft_info['type']; ?></h3>
+        <ul>
+          <li>Seats: <?php echo $aircraft_info['seats']; ?></li>
+          <li>Cruise Speed: <?php echo $aircraft_info['cruise']; ?></li>
+          <li>Fuel Burn: <?php echo $aircraft_info['fuel-burn']; ?></li>
+          <li>Description: <?php echo $aircraft_info['description']; ?></li>
+        </ul>
+        <p class="item-credit"><?php echo $aircraft_info['credit']; ?></p>
+      </div> <!-- detail-wrapper  -->
     </div> <!-- end daily-detail -->
 
-    <h3>Want to see the Daily Menu?</h3>
     <div class="daily-menu">
       <ul class="daily-wrapper">
+      <h3>Want to see the Daily Menu?</h3>
 
 <?php // List of daily links
 foreach ($weekly_items as $key => $value) {
@@ -160,7 +163,7 @@ foreach ($weekly_items as $key => $value) {
   echo '<li><a class="'. $link_styles . '" href="./daily.php?today='.$key.'">'.$key.'</a></li>';
 
 } // end foreach
-?>
+?>  
       </ul> <!-- end daily-wrapper class -->
     </div> <!-- end daily-menu class -->
   </div> <!-- end wrapper -->
