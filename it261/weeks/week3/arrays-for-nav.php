@@ -130,10 +130,10 @@ if THIS_PAGE == key
   </head>
   <body>
 
-<nav>
-<ul>
-<?php
+  <nav>
+    <ul>
 
+<?php
 foreach ($nav as $key => $value) {
   //if ('project.php' == $key) {    // for testing
   if (THIS_PAGE == $key) {
@@ -143,8 +143,9 @@ foreach ($nav as $key => $value) {
   }
 }   // end foreach
 ?>
-</ul>
-</nav>
+
+    </ul>
+  </nav>
 
   </body>
 </html>

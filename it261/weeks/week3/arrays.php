@@ -126,7 +126,12 @@ $nav['gallery.php'] = 'Gallery';
 
 
 
-echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;">FooBar</a>' // ... (get from video)
+echo '<li style="list-style-type:none;"><a style="text-decoration:none; color:red;" href="index.php">Index</a></li>';
+
+// Now do that with a loop, by iterating over array with both: (a) link file, and (b)
+//foreach ($nav as $key => $value) {
+// }
+
 ?>
 
 </ul>
