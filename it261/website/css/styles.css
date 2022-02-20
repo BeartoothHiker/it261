@@ -131,6 +131,7 @@ footer li {
 
 .daily-menu ul {
   float: left;
+  margin-bottom: 1em;
 }
 
 .daily-menu li {
