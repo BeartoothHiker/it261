@@ -116,16 +116,19 @@ footer li {
 .daily-image-title {
   text-align: right;
 }
+.item-credit {
+  margin: 20px 0 0;
+}
 
 .daily-wrapper {
   margin: 10px 0;
 }
 
-.daily-menu-class ul {
+.daily-menu ul {
   float: left;
 }
 
-.daily-menu-class li {
+.daily-menu li {
   float: left;
   margin-right: 30px;
   list-style-type: none;

@@ -1,6 +1,8 @@
 <?php
 include('includes/header.php');
 
+// First set value for $today
+
 date_default_timezone_set('America/Los_Angeles');
 $today = date('l');
 
@@ -8,6 +10,8 @@ if (isset($_GET['today'])) {
   // Prefer Query String day
   $today = $_GET['today'];
 }
+
+// Second, get value for $aircraft_make
 
 $weekly_items = array(
   'Sunday' => 'Swift',
@@ -18,25 +22,10 @@ $weekly_items = array(
   'Friday' => 'Fairchild',
   'Saturday' => 'Socata'
 );
+
 $aircraft_make = $weekly_items[$today];
 
-// $aircraft_info = array(
-//   'image' => './images/mooney201.jpg',
-//   'image-alt' => 'mooney airplane',
-//   'description' => '',
-//   '' 
-// );
-
-// $aircraft_info = array(
-//   'type' => 'Mooney M20-J',
-//   'image' => './images/mooney201-800-600.jpg',
-//   'image-alt' => 'mooney airplane',
-//   'seats' => '4',
-//   'cruise' => '155 knots (178 mph)',
-//   'fuel-burn' => '10 gallons/hour',
-//   'description' => 'Fast, efficient, good payload, smaller interior'
-// );
-
+// Third, fill out $aircraft_info based on $aircraft_make
 
 switch ($aircraft_make) {
 case 'Swift':
@@ -142,6 +131,7 @@ case 'Socata':
   <div id="wrapper">
     <h1><?php echo $today. ' is ' . $aircraft_make . ' Day'; ?></h1>
     <div class="daily-detail">
+
       <img class="daily-image" <?php echo 'src="' . $aircraft_info['image'] . '" alt="' . $aircraft_info['image-alt'] . '"'; ?> >
       <h3 class="daily-image-title"><?php echo $aircraft_info['type']; ?></h3>
       <ul class="listWrapper">
@@ -149,32 +139,31 @@ case 'Socata':
         <li>Cruise Speed: <?php echo $aircraft_info['cruise']; ?></li>
         <li>Fuel Burn: <?php echo $aircraft_info['fuel-burn']; ?></li>
         <li>Description: <?php echo $aircraft_info['description']; ?></li>
-        <br>
-        <p><?php echo $aircraft_info['credit']; ?></p>
-      </ul>
-      <br>
-    </div> <!-- end aircraft-detail -->
+        <p class="item-credit"><?php echo $aircraft_info['credit']; ?></p>
+      </ul> <!-- end listWrapper -->
+
+    </div> <!-- end daily-detail -->
+
     <h3>Want to see the Daily Menu?</h3>
-    <div class="daily-menu-class">
+    <div class="daily-menu">
       <ul class="daily-wrapper">
 
 <?php // List of daily links
 foreach ($weekly_items as $key => $value) {
 
   //if ('project.php' == $key) {    // for testing
-  $link_styles = '"daily-link"';
+  $link_styles = 'daily-link';
   if (THIS_PAGE == $key) {
     // Highlight current page
-    $link_styles .= " current";
+    $link_styles .= ' current';
   }
   echo '<li><a class="'. $link_styles . '" href="./daily.php?today='.$key.'">'.$key.'</a></li>';
 
 } // end foreach
 ?>
-      </ul>
-    </div> <!-- end daily-list class -->
+      </ul> <!-- end daily-wrapper class -->
+    </div> <!-- end daily-menu class -->
   </div> <!-- end wrapper -->
-  <div class="daily-list">
 
   <div id="footer-clear"></div>
 
