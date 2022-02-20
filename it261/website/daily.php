@@ -139,8 +139,8 @@ case 'Socata':
         <li>Cruise Speed: <?php echo $aircraft_info['cruise']; ?></li>
         <li>Fuel Burn: <?php echo $aircraft_info['fuel-burn']; ?></li>
         <li>Description: <?php echo $aircraft_info['description']; ?></li>
-        <p class="item-credit"><?php echo $aircraft_info['credit']; ?></p>
       </ul> <!-- end listWrapper -->
+      <p class="listWrapper item-credit"><?php echo $aircraft_info['credit']; ?></p>
 
     </div> <!-- end daily-detail -->
 
