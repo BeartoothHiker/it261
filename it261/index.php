@@ -79,7 +79,9 @@
       </ul>
       <h4>Week5</h4>
       <ul>
-        <li><a href="./weeks/week5/currency.php">Currency</a></li>
+      <li><a href="./weeks/week5/currency.php">Currency</a></li>
+      <li><a href="./weeks/week5/currency2.php">Currency2</a></li>
+      <li><a href="./weeks/week5/null.php">Null</a></li>
       </ul>
       <h4>Week6</h4>
       <ul>
