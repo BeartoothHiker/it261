@@ -71,3 +71,30 @@
   echo '<p>I now have <b>' . number_format($amount, 2) . '</b> dollars!</p><br>';
   echo '<br>';
   echo 'Bye!';
+
+
+  echo  '<p>If/Else Test<p>';
+  if (FALSE) {
+    echo 'I shouldn\'t get here!';
+  } else {
+    echo 'FALSE is evaluated to false, zero, etc.';
+  }
+
+  echo '<h2>associative array - values</h2>';
+  $features = [
+    'winter' => 'snow, white',
+    'spring' => 'tulips, green',
+    'summer' => 'grass, brown',
+    'fall' => 'leaves, orange'
+  ];
+
+  foreach ($features as $feature)
+  {
+    echo "<p>$feature</p>"; 
+  }
+
+  echo '<h2>associative array - keys and values</h2>';
+  foreach ($features as $key => $value)
+  {
+    echo "<p>$key - $value</p>"; 
+  }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet">
   <title>First Currency Form</title>
 </head>
 
@@ -21,7 +22,6 @@
 
 <label>Amount</label>
 <input type="number" name="amount" value="<?php if(isset($_POST['amount'])) echo $_POST['amount']; ?>" >
-
 
 <!-- 
 canadian = .80;
@@ -141,7 +141,7 @@ if (!empty($name && $email && $amount && $currency && $bank)) {
 
 } // end isset
 
-}
+} // close $_SERVER['REQUEST_METHOD']
 
 ?>
 
