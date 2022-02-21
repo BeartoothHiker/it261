@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/styles.css" rel="stylesheet">
-  <title>First Currency Form</title>
+  <title>Second Currency Form</title>
 </head>
 
 <body>
-<h1>My currency converter</h1>
+<h1>My Second Currency Converter</h1>
 
 <!-- FORM -->
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"  method="post">
@@ -93,23 +93,23 @@ yen = 0.0087;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 if (empty($_POST['name'])) {
-  echo 'Please fill out yourname!';
+  echo '<span class="error">Please fill out your name.</span>';
 }
 
 if (empty($_POST['email'])) {
-  echo 'Please fill out email!';
+  echo '<span class="error">Please fill out email.</span>';
 }
 
 if (empty($_POST['amount'])) {
-  echo 'Please fill out amount with non-zero value.';
+  echo '<span class="error">Please fill out amount with non-zero value.</span>';
 }
 
 if (empty($_POST['currency'])) {
-  echo 'Please choose a currency!';
+  echo '<span class="error">Please choose a currency.</span>';
 }
 
 if ($_POST['bank'] == NULL) {
-  echo 'Please choose your banking institution.';
+  echo '<span class="error">Please choose your banking institution.</span>';
 }
 
 
@@ -121,10 +121,13 @@ if (isset($_POST['name'],
 
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $amount = $_POST['amount'];
-  $currency = $_POST['currency'];
+  $amount = intval($_POST['amount']);
+  $currency = floatval($_POST['currency']);
   $email = $_POST['email'];
   $bank = $_POST['bank'];
+
+  // floatval => change type to float
+  // intval => change to type int
 
 $total = $amount * $currency;
 

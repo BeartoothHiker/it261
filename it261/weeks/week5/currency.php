@@ -93,23 +93,23 @@ yen = 0.0087;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 if (empty($_POST['name'])) {
-  echo 'Please fill out yourname!';
+  echo '<span class="error">Please fill out your name.</span>';
 }
 
 if (empty($_POST['email'])) {
-  echo 'Please fill out email!';
+  echo '<span class="error">Please fill out email.</span>';
 }
 
 if (empty($_POST['amount'])) {
-  echo 'Please fill out amount with non-zero value.';
+  echo '<span class="error">Please fill out amount with non-zero value.</span>';
 }
 
 if (empty($_POST['currency'])) {
-  echo 'Please choose a currency!';
+  echo '<span class="error">Please choose a currency.</span>';
 }
 
 if ($_POST['bank'] == NULL) {
-  echo 'Please choose your banking institution.';
+  echo '<span class="error">Please choose your banking institution.</span>';
 }
 
 
