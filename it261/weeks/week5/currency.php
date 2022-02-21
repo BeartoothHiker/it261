@@ -14,10 +14,13 @@
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"  method="post">
 
 <label>Name</label>
-
 <input type="text" name="name" value="<?php if(isset($_POST['name'])) echo $_POST['name']; ?>" >
+
+<label>Email</label>
 <input type="email" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>" >
-<input type="amount" name="number" value="<?php if(isset($_POST['number'])) echo $_POST['number']; ?>" >
+
+<label>Amount</label>
+<input type="number" name="amount" value="<?php if(isset($_POST['amount'])) echo $_POST['amount']; ?>" >
 
 
 <!-- 
@@ -28,32 +31,45 @@ euros = 1.14;
 yen = 0.0087;
 --> 
   
-<!-- Logic for stickiness in radio button is:  If Post Currency is set AND if Post Currency Is set to conversion value -->
+<!-- Logic for stickiness in radio button is:  
+  -- If Post[Currency] is set AND 
+  -- if Post[Currenc] = value (e.g. exchange rate) echo checked='checked' -->
 <!-- and 'echo checked == checked> -->
 <label>Currency</label>
 <ul>
 <li>
-<input type="radio" name="currency" value="0.0013" <?php echo 'checked="checked"' ?> > Rubles
+<input type="radio" name="currency" value="0.013" <?php if(isset($_POST['currency']) && ($_POST['currency'] == 0.013)) {echo 'checked="checked"';} ?> >Rubles
 </li>
 
 <li>
-<input type="radio" name="currency" value="0.80" > Candian
+<input type="radio" name="currency" value="0.80" <?php if(isset($_POST['currency']) && ($_POST['currency'] == 0.80)) {echo 'checked="checked"';} ?> >Canadian
+</li>
+
+<li>
+<input type="radio" name="currency" value="1.37" <?php if(isset($_POST['currency']) && ($_POST['currency'] == 1.37)) {echo 'checked="checked"';} ?> >Pounds
+</li>
+
+<li>
+<input type="radio" name="currency" value="1.14" <?php if(isset($_POST['currency']) && ($_POST['currency'] == 1.14)) {echo 'checked="checked"';} ?> >Euros
+</li>
+
+<li>
+<input type="radio" name="currency" value="0.0087" <?php if(isset($_POST['currency']) && ($_POST['currency'] == 0.0087)) {echo 'checked="checked"';} ?> >Yen
 </li>
 </ul>
 
 
-<!-- choose bank -->
+<!-- checkbox works same way as radio button -->
 <select name="bank">
-<option value="" NULL <?php  if(isset($_POST['bank']) && $_POST['bank'] == NULL) echo 'selected = unselected' ?> >Select One</option`>
 
-<option value="boa" <?php  if(isset($_POST['bank']) && $_POST['bank'] == 'boa') echo 'selected = selected' ?> >Bank of America</option>
-
-<option value="becu" <?php  if(isset($_POST['bank']) && $_POST['bank'] == 'becu') echo 'selected = selected' ?> >BECU</option>
-
-<option value="wells fargo" <?php  if(isset($_POST['bank']) && $_POST['bank'] == 'wells fargo') echo 'selected = selected' ?> >Wells Fargo</option>
+<!-- You cannot select 'select One -->
+<option value="" NULL <?php  if(isset($_POST['bank']) && ($_POST['bank'] == NULL)) echo 'selected ="unselected"' ?> >Select One</option>
+<option value="boa" <?php  if(isset($_POST['bank']) && ($_POST['bank'] == 'boa')) echo 'selected="selected"' ?> >Bank of America</option>
+<option value="chase" <?php  if(isset($_POST['bank']) && ($_POST['bank'] == 'chase')) echo 'selected="selected"' ?> >Chase</option>
+<option value="wells" <?php  if(isset($_POST['bank']) && ($_POST['bank'] == 'wells')) echo 'selected="selected"' ?> >Wells Fargo</option>
+<option value="becu" <?php  if(isset($_POST['bank']) && ($_POST['bank'] == 'becu')) echo 'selected="selected"' ?> >BECU</option>
 
 </select>
-
 
 <input type="submit" value="Convert it!">
 </form>
@@ -65,10 +81,14 @@ yen = 0.0087;
 // if each of the input fields are not filld, give me as specific message
 // Name, email, amount, currency, bank
 
+// canadian = .80;
+// rubles = 0.013;
+// pounds = 1.37;
+// euros = 1.14;
+// yen = 0.0087;
+
 // $_SERVER[REQUEST_METHOD]
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-}
 
 if (empty($_POST['name'])) {
   echo 'Please fill out yourname!';
@@ -79,12 +99,17 @@ if (empty($_POST['email'])) {
 }
 
 if (empty($_POST['amount'])) {
-  echo 'Please fill out amount!';
+  echo 'Please fill out amount with non-zero value.';
 }
 
 if (empty($_POST['currency'])) {
   echo 'Please choose a currency!';
 }
+
+if ($_POST['bank'] == NULL) {
+  echo 'Please choose your banking institution.';
+}
+
 
 if (isset($_POST['name'],
           $_POST['email'],
@@ -92,32 +117,31 @@ if (isset($_POST['name'],
           $_POST['currency'],
           $_POST['bank'])) {
 
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $amount = $_POST['amount'];
-            $currency = $_POST['currency'];
-            $email = $_POST['email'];
-            $bank = $_POST['bank'];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $amount = $_POST['amount'];
+  $currency = $_POST['currency'];
+  $email = $_POST['email'];
+  $bank = $_POST['bank'];
 
 $total = $amount * $currency;
-
 
 // Only echo fields it will be success
 if (!empty($name && $email && $amount && $currency && $bank)) {
 
-  echo'
-  <p>.$name.<p>
-  <p>.$email.<p>
-  <p>.$amount.<p>
-  <p>.$currency.<p>
-  <p>.$total.  in Aerical dollars <p>
-  <p>.$name.<p>
-  <p>.$bank.<p>
-  ';
+  echo"
+  <p>$name<p>
+  <p>$email<p>
+  <p>$amount in foreign currency<p>
+  <p>$total US Dollars<p>
+  <p>$bank<p>
+  ";
 
 } // end isempty
 
 } // end isset
+
+}
 
 ?>
 
