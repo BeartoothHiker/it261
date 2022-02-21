@@ -74,7 +74,9 @@ yen = 0.0087;
 <input type="submit" value="Convert it!">
 </form>
 
-<p><a href="">Reset</a></p>
+<div>
+<button><a href="">Reset</a></button>
+</div>
 
 <?php
 // if name is not filled out, give me message
@@ -130,11 +132,13 @@ $total = $amount * $currency;
 if (!empty($name && $email && $amount && $currency && $bank)) {
 
   echo"
-  <p>$name<p>
-  <p>$email<p>
-  <p>$amount in foreign currency<p>
-  <p>$total US Dollars<p>
-  <p>$bank<p>
+  <div class=\"box\">
+  <h2>Hello <b>$name</b></h2>
+  <p>We have confirmed your email as <b>$email</b>, and we will be sending you the following information:<p>
+  <p>You have deposited $amount in foreign currency<p>
+  <p>And this will equal $ $total US Dollars<p>
+  <p>depositied at your account at: $bank<p>
+  </div>
   ";
 
 } // end isempty
