@@ -19,7 +19,7 @@ function random_images($photos)
   $my_return = '';
   $i = rand(0, 4);
 
-  $selected_image = '' . photos[$i] . '.jpg';
+  $selected_image = '' . $photos[$i] . '.jpg';
   $my_return = '<img src="images/' . $selected_image . ' alt=' /* more stuf here */;
 
   // more stuff in here, get from video

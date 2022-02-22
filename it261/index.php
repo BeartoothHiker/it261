@@ -79,17 +79,17 @@
       </ul>
       <h4>Week5</h4>
       <ul>
-      <li><a href="./weeks/week5/currency.php">Currency</a></li>
-      <li><a href="./weeks/week5/currency2.php">Currency2</a></li>
-      <li><a href="./weeks/week5/null.php">Null</a></li>
+        <li><a href="./weeks/week5/currency.php">Currency</a></li>
+        <li><a href="./weeks/week5/currency2.php">Currency2</a></li>
+        <li><a href="./weeks/week5/null.php">Null</a></li>
       </ul>
       <h4>Week6</h4>
       <ul>
-        <li>Placeholder</li>
+        <li><a href="./weeks/week6/form.php">Form</a></li>
       </ul>
       <h4>Week7</h4>
       <ul>
-        <li><a href="./weeks/week7/random.php">Currency</a></li>
+        <li><a href="./weeks/week7/random.php">Random</a></li>
       </ul>
       <h4>Week8</h4>
       <ul>
