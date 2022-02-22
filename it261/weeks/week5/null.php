@@ -46,4 +46,18 @@ echo '<h2>What will be the answer? E is not NULL!</h2>';
 $e = "";
 echo 'e is ' . is_null($e) . '';
 
+echo '<h2>Play with empty() and boolean operators</h2>';
+
+
+$s0 = null;
+$s1 = '';
+$s2 = "text";
+
+echo '$s0 = ('. $s0 .') => (bool)$s0 = ['. (bool)$s0 .'] => empty($s0) = ['. empty($s0) .']<br>';
+echo '$s1 = ('. $s1 .') => (bool)$s1 = ['. (bool)$s1 .'] => empty($s1) = ['. empty($s1) .']<br>';
+echo '$s2 = ('. $s2 .') => (bool)$s2 = ['. (bool)$s2 .'] => empty($s2) = ['. empty($s2) .']<br>';
+echo '($s1 && $s2) = ('. ($s1 && $s2) .') => (bool)($s1 && $s2) = ['. (bool)($s1 && $s2) .'] => empty($s1 && $s2) = ['. empty($s1 && $s2) .']<br>';
+
+
+  
 ?>
