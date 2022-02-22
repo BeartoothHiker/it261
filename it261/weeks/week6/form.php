@@ -78,25 +78,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['privacy']
   )) {
 
-    $to = 'robinson.jeremy@seattlecolleges.edu';
+    $to = 'gdsbweb@outlook.com';
     $subject = 'Test email ' . date('m/d/y, h i A');
 
-    $body = '
-First name : ' . $first_name . '  ' . '<br>' . '
-Last name : ' . $last_name . '  ' . '<br>' . '
-Email : ' . $email . '  ' . '<br>' . '
-Gender : ' . $gender . '  ' . '<br>' . '
-Phone Number : ' . $phone . '  ' . '<br>' . '
-Regions : ' . $regions . '  ' . '<br>' . '
-Comments : ' . $comments . '  ' . '<br>' . '
+    $body ='
+First Name: ' . $first_name . ' ' .PHP_EOL. '
+Last Name: ' . $last_name . ' ' .PHP_EOL. '
+Email: ' . $email . ' ' .PHP_EOL. '
+Gender: ' . $gender . ' ' .PHP_EOL. '
+Phone Number: ' . $phone . ' ' .PHP_EOL. '
+Regions: ' . $regions . ' ' .PHP_EOL. '
+Comments: ' . $comments . ' ' .PHP_EOL. '
 ';
 
-echo $to . '<br>';
-echo $subject . '<br>';
-echo $body . '<br>';
+// echo $to . '<br>';
+// echo $subject . '<br>';
+// echo $body . '<br>';
 
-    // mail($to, $subject, $body);
-    // header('Location: thx.php');
+    mail($to, $subject, $body);
+    header('Location: thx.php');
     
   } // isset($_POST ...)
 
