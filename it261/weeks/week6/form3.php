@@ -111,7 +111,8 @@ Comments: ' . $comments . ' ' .PHP_EOL. '
 
     $headers = array(
       'From' => 'noreply@codewithjeremy.dev',
-      'Reply to:' => $email,
+      'Reply-To' => $email,
+      'X-Mailer' => 'PHP/' . phpversion()
     );
 
       mail($to, $subject, $body, $headers);
