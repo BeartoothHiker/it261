@@ -1,2 +1,5 @@
+#ignore zip file
+/Ex_Files_PHP_forWD.zip
+
 #ignore sample files
 /Ex_Files_PHP_forWD
