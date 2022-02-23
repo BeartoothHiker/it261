@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $wines = $_POST['wines'];
   }
 
+  // NULL is the the 'empty' select item
   if ($_POST['regions'] == NULL) {
     $regions_err = 'Please select your region';
   } else {
@@ -78,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['privacy']
   )) {
 
-    $to = 'gdsbweb@outlook.com';
+    $to = 'mostpuzzled@outlook.com';
     $subject = 'Test email ' . date('m/d/y, h i A');
 
     $body ='
