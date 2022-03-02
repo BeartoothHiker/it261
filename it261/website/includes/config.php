@@ -68,11 +68,11 @@ $nav['gallery.php'] = 'Gallery';
 // Function: make_nav_links
 // Purpose: To generate the list of page links in our NAV 
 // on the website
-function make_nav_links($nav) {
+function make_nav_links($nav_array) {
 
   $return_val = '';
 
-  foreach ($nav as $key => $value) {
+  foreach ($nav_array as $key => $value) {
 
     if (THIS_PAGE == $key) {
       $return_val .= '<li><a class="current" href="'.$key.'"> '.$value.'</a></li>';

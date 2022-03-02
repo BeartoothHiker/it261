@@ -18,7 +18,7 @@
         <ul>
 
           <!-- Nav defined in links  -->
-          <?php make_nav_links($nav); ?>
+          <?php echo make_nav_links($nav); ?>
 
         </ul>
       </nav>
