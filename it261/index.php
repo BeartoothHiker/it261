@@ -92,8 +92,10 @@
       </ul>
       <h4>Week7</h4>
       <ul>
-      <li><a href="./weeks/week7/form3.php">Form3+</a></li>
-      <li><a href="./weeks/week7/random.php">Random</a></li>
+        <li><a href="./weeks/week7/form3.php">Form3+</a></li>
+        <li><a href="./weeks/week7/random.php">Random</a></li>
+        <li><a href="./weeks/week7/strings.php">Strings</a></li>
+        <li><a href="./weeks/week7/pictures.php">Pictures</a></li>
       </ul>
       <h4>Week8</h4>
       <ul>
