@@ -65,10 +65,10 @@ $nav['project.php'] = 'Project';
 $nav['contact.php'] = 'Contact';
 $nav['gallery.php'] = 'Gallery';
 
-// Function: make_links
+// Function: make_nav_links
 // Purpose: To generate the list of page links in our NAV 
 // on the website
-function make_links($nav) {
+function make_nav_links($nav) {
 
   $return_val = '';
 

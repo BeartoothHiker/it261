@@ -16,16 +16,10 @@
 
       <nav>
         <ul>
-<?php
-foreach ($nav as $key => $value) {
-  //if ('project.php' == $key) {    // for testing
-  if (THIS_PAGE == $key) {
-    echo '<li><a class="current" href="'.$key.'"> '.$value.'</a></li>';
-  } else {
-    echo '<li><a href="'.$key.'"> '.$value.'</a></li>';
-  }
-}   // end foreach
-?>
+
+          <!-- Nav defined in links  -->
+          <?php make_nav_links($nav); ?>
+
         </ul>
       </nav>
     </div> <!-- end inner-header -->
