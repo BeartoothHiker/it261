@@ -49,6 +49,10 @@
       <div>
         <img class="mamp-image" alt="PHP error" src="images/php-error.png">
       </div>
+      <h4>Adminer Install</h4>
+      <div>
+        <img class="mamp-image" alt="Adminer Installed" src="images/adminer-db-table.jpg">
+      </div>
     </main>
 
     <aside>
