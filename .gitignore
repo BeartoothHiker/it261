@@ -3,3 +3,6 @@
 
 #ignore sample files
 /Ex_Files_PHP_forWD
+
+#ignore credentials PHP
+credentials.php
