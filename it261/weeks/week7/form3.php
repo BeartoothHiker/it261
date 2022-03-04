@@ -260,9 +260,6 @@ Comments: ' . $comments . ' ' .PHP_EOL. '
     </fieldset>
   </form>
 
-  <?php
-
-  ?>
 
 </body>
 
