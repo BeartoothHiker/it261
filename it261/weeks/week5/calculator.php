@@ -41,7 +41,7 @@
         <li>
         <input type="radio" name="fuel-price" value="4.00" <?php if(isset($_POST['fuel-price']) && ($_POST['fuel-price'] == 4.00)){echo 'checked="checked"';} ?>>$4.00
         </li>
-      <ul>
+      </ul>
 
       <select name="efficiency">
 
