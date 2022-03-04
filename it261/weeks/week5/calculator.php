@@ -43,6 +43,18 @@
         </li>
       <ul>
 
+      <select name="efficiency">
+
+      <!-- Note -->
+      <option value="" NULL <?php if(isset($_POST['efficiency']) && ($_POST['efficiency'] == NULL)) echo 'selected ="unselected"' ?> >Select One</option>
+      <option value="7" <?php if(isset($_POST['efficiency']) && ($_POST['efficiency'] == '7')) echo 'selected="selected"' ?> >Horrid (7 gph)</option>
+      <option value="12" <?php if(isset($_POST['efficiency']) && ($_POST['efficiency'] == '12')) echo 'selected="selected"' ?> >Bad (12 gph)</option>
+      <option value="19" <?php if(isset($_POST['efficiency']) && ($_POST['efficiency'] == '19')) echo 'selected="selected"' ?> >OK (19 gph)</option>
+      <option value="26" <?php if(isset($_POST['efficiency']) && ($_POST['efficiency'] == '26')) echo 'selected="selected"' ?> >Passable (26 gph)</option>
+
+      </select>
+
+
       <input type="submit" value="calculate">
       <p><a href="">Reset</a></p>
     </form>
@@ -83,7 +95,7 @@ if (isset($_POST['name']
           , $_POST['speed']
           , $_POST['daily']
           , $_POST['fuel-price']
-          // , $_POST['efficiency']
+          , $_POST['efficiency']
           )) 
 {
 
@@ -92,10 +104,10 @@ if (isset($_POST['name']
   $speed = intval($_POST['speed']);
   $daily_duration = intval($_POST['daily']);
   $fuel_price = floatval($_POST['fuel-price']);
-  $mpg = 13; //$_POST['efficiency'];
+  $mpg = $_POST['efficiency'];
 
 // Only echo fields it will be success
-if (!empty($name && $distance && $speed && $daily_duration && $fuel_price /* && $mpg*/)) {
+if (!empty($name && $distance && $speed && $daily_duration && $fuel_price && $mpg)) {
 
   $hours = round($distance / $speed, 1);
   $days = ceil($hours/$daily_duration);  // Round number of days up 
@@ -113,7 +125,7 @@ if (!empty($name && $distance && $speed && $daily_duration && $fuel_price /* && 
   </div>
   ";
 
-} // end isempty
+} // end !empty
 
 } // end isset
 

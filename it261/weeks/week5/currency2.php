@@ -57,9 +57,9 @@ yen = 0.0087;
 <input type="radio" name="currency" value="0.0087" <?php if(isset($_POST['currency']) && ($_POST['currency'] == 0.0087)) {echo 'checked="checked"';} ?> >Yen
 </li>
 </ul>
-
-
 <!-- checkbox works same way as radio button -->
+
+
 <select name="bank">
 
 <!-- You cannot select 'select One -->
