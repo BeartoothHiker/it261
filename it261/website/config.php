@@ -36,17 +36,20 @@ switch(THIS_PAGE) {
   case 'project.php':
     $title = 'JeremyRo\'s Project Page';
     $body_class = 'project inner'; // class
+    $headline = 'TODO:';
     break;
 
   case 'contact.php':
     $title = 'JeremyRo\'s Contact Page';
     $body_class = 'contact inner'; // class
     $headline = 'Contact us today';
+    $headline = 'TODO:';
     break;
 
   case 'gallery.php':
     $title = 'JeremyRo\'s Gallery';
     $body_class = 'gallery inner'; // class
+    $headline = 'TODO:';
     break;
 
   case 'thx.php':
