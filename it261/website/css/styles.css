@@ -69,7 +69,7 @@ nav a {
 }
 
 #hero {
-  height: 300px;
+  height: 100px;
   background: #f00;
   margin-bottom: 20px;
   clear:both;
@@ -86,9 +86,12 @@ main {
 
 aside {
   width: 35%;
-  padding: 5px;
-  background: coral;
   float: right;
+}
+
+aside img {
+  max-width: 100%;
+  height: auto;
 }
 
 #footer-clear {

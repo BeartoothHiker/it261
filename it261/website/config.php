@@ -210,10 +210,13 @@ switch ($aircraft_make) {
       'credit' => ''
     );
     break;
-  }
+}
 
+//
+// Contact form logic
+//
 
-  // initalize form variables (beyond the errors?)
+// initalize form variables (beyond the errors?)
 // Scenario is is selcting
 
 $first_name_err = '';
@@ -334,3 +337,27 @@ Comments: ' . $comments . ' ' .PHP_EOL. '
     } // end - if(form_data_variablies ... )
   } // isset($_POST ...)
 } // end server request is POST
+
+//
+// Random photo logic
+//
+
+$photos_formation[0] = 'photo0';
+$photos_formation[1] = 'photo1';
+$photos_formation[2] = 'photo2';
+$photos_formation[3] = 'photo3';
+$photos_formation[4] = 'photo4';
+$photos_formation[5] = 'photo5';
+
+function random_images($photo_list)
+{
+  $my_return = '';
+  $count = sizeof($photo_list);
+  $i = rand(0, $count-1);
+
+  $selected_base = $photo_list[$i];
+  $selected_image = $selected_base . '.jpg';
+  $my_return = '<img src="' . './images/' . $selected_image . '" alt="'. $selected_base .'">';
+  
+  return $my_return;
+}

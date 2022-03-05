@@ -14,7 +14,7 @@ include('includes/header.php');
     </main> <!-- end main-->
 
     <aside>
-      <h3>Add Aside Content here.</h3>
+      <?php echo random_images($photos_formation); ?>
     </aside> <!-- end aside -->
   </div> <!-- end wrapper -->
   <div id="footer-clear"></div>
