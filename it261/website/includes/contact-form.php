@@ -23,18 +23,18 @@
   <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="<?php
     if (isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>"><span class="error"><?= $phone_err ?></span>
 
-<label>Reason for contacting CodeWithJeremy:</label>
+  <label>Reason for contacting CodeWithJeremy:</label>
   <select name="contact-reason">
     <option value="" NULL <?php 
       if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == NULL) echo 'selected = "unselected" '; ?>>Select one</option>
-    <option value="create" <?php
+    <option value="Create-new" <?php
       if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Create-new') echo 'selected = "selected" '; ?>>New web application project</option>
-    <option value="extend" <?php 
+    <option value="Extend-existing" <?php 
       if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Extend-existing') echo 'selected = "selected" '; ?>>Extend an existing web application</option>
-    <option value="tune" <?php 
+    <option value="Tune" <?php 
       if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Tune') echo 'selected = "selected" '; ?>>Improve the performance of my web applciation</option>
-    <option value="other" <?php 
-      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'other') echo 'selected = "selected" '; ?>>It's more complex, let's talk!</option>
+    <option value="Other" <?php 
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Other') echo 'selected = "selected" '; ?>>It's more complex, let's talk!</option>
   </select>
   <span class="error"><?= $contact_reason_err ?></span>
 
