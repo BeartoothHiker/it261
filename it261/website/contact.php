@@ -7,7 +7,9 @@ include('includes/header.php');
 
   <div id="wrapper">
     <main>
+
 <?php include('./includes/contact-form.php'); ?>
+
     </main> <!-- end main-->
 
   </div> <!-- end wrapper -->
