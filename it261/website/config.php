@@ -19,18 +19,18 @@ switch(THIS_PAGE) {
   case 'index.php':
      $title = 'JeremyRo\'s Homepage';
      $body_class = 'home';  // class
-     $headline = 'Welome to the Home Page';
+     $headline = 'Welcome to the Home Page';
      break;
   case 'daily.php':
     $title = 'JeremyRo\'s Daily Page';
     $body_class = 'daily inner'; // class
-    $headline = 'Welome to the Daily Page';
+    $headline = 'Welcome to the Daily Page';
     break;
 
   case 'about.php':
     $title = 'JeremyRo\'s About Page';
     $body_class = 'about inner'; // class
-    $headline = 'All about this site';
+    $headline = 'About';
     break;
 
   case 'project.php':
@@ -42,14 +42,13 @@ switch(THIS_PAGE) {
   case 'contact.php':
     $title = 'JeremyRo\'s Contact Page';
     $body_class = 'contact inner'; // class
-    $headline = 'Contact us today';
-    $headline = 'TODO:';
+    $headline = 'Contact Us';
     break;
 
   case 'gallery.php':
     $title = 'JeremyRo\'s Gallery';
     $body_class = 'gallery inner'; // class
-    $headline = 'TODO:';
+    $headline = 'Photo Gallery Project';
     break;
 
   case 'thx.php':

@@ -2,6 +2,8 @@
 include('config.php');
 include('includes/header.php');
 ?>
+  <!-- Space after header  -->
+  <div id="wrapper-buffer"></div>
 
   <div id="wrapper">
     <div class="daily-detail <?php echo strtolower($aircraft_make) ?>">
