@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       && $privacy
       && $comments) {
 
-      $to = 'MostPuzzled <mostpuzzled@outlook.com>, Jeremy <robinson.jeremy@gmail.com>';
+      $to = 'MostPuzzled <mostpuzzled@outlook.com>, Olga <szemeo@mystudentswa.com>';
       $subject = 'Test email ' . date('m/d/y, h i A');
       $body ='
 First Name: ' . $first_name . ' ' .PHP_EOL. '
@@ -110,7 +110,6 @@ Comments: ' . $comments . ' ' .PHP_EOL. '
 ';
 
     $headers = array(
-      //'To' => 'MostPuzzled <mostpuzzled@outlook.com>',
       'From' => 'CodeWithJeremy <noreply@codewithjeremy.dev>',
       'Reply-To' => $email,
       'X-Mailer' => 'PHP/' . phpversion()

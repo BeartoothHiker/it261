@@ -28,11 +28,11 @@
     <option value="" NULL <?php 
       if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == NULL) echo 'selected = "unselected" '; ?>>Select one</option>
     <option value="create" <?php
-      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'create') echo 'selected = "selected" '; ?>>New web application project</option>
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Create-new') echo 'selected = "selected" '; ?>>New web application project</option>
     <option value="extend" <?php 
-      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'extend') echo 'selected = "selected" '; ?>>Extend an existing web application</option>
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Extend-existing') echo 'selected = "selected" '; ?>>Extend an existing web application</option>
     <option value="tune" <?php 
-      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'tune') echo 'selected = "selected" '; ?>>Improve the performance of my web applciation</option>
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'Tune') echo 'selected = "selected" '; ?>>Improve the performance of my web applciation</option>
     <option value="other" <?php 
       if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'other') echo 'selected = "selected" '; ?>>It's more complex, let's talk!</option>
   </select>
