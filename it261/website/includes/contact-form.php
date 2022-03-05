@@ -1,7 +1,7 @@
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 <fieldset>
 
-  <legend>Contact JeremyRo</legend>
+  <legend>Contact CodeWithJeremy</legend>
 
   <label>First Name</label>
   <input type="text" name="first_name" value="<?php
@@ -19,67 +19,44 @@
     if (isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>">
   <span class="error"><?= $email_err ?></span>
 
-  <label>Gender</label>
-  <ul>
-    <li>
-      <input type="radio" name="gender" value="female" <?php
-        if (isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked = "checked"'; ?>>Female
-    </li>
-    <li>
-      <input type="radio" name="gender" value="male" <?php
-        if (isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked = "checked"'; ?>>Male
-    </li>
-    <li>
-      <input type="radio" name="gender" value="neither" <?php
-        if (isset($_POST['gender']) && $_POST['gender'] == 'neither') echo 'checked= "checked"'; ?>>Neither
-    </li>
-  </ul>
-  <span class="error"><?= $gender_err ?></span>
-
   <label>Phone</label>
   <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="<?php
     if (isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>"><span class="error"><?= $phone_err ?></span>
 
-  <label>Favorite Wines</label>
+<label>Reason for contacting CodeWithJeremy:</label>
+  <select name="contact-reason">
+    <option value="" NULL <?php 
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == NULL) echo 'selected = "unselected" '; ?>>Select one</option>
+    <option value="create" <?php
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'create') echo 'selected = "selected" '; ?>>New web application project</option>
+    <option value="extend" <?php 
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'extend') echo 'selected = "selected" '; ?>>Extend an existing web application</option>
+    <option value="tune" <?php 
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'tune') echo 'selected = "selected" '; ?>>Improve the performance of my web applciation</option>
+    <option value="other" <?php 
+      if (isset($_POST['contact-reason']) && $_POST['contact-reason'] == 'other') echo 'selected = "selected" '; ?>>It's more complex, let's talk!</option>
+  </select>
+  <span class="error"><?= $contact_reason_err ?></span>
+
+  <label>Select the features you you want help with:</label>
   <ul>
     <li>
-      <!-- notice that the 'name="wines[]"' has array syntax -->
-      <input type="checkbox" name="wines[]" value="cab" <?php
-        if (isset($_POST['wines']) && in_array('cab', $wines)) echo 'checked = "checked"'; ?>>Cabernet
+      <!-- notice that the 'name="features[]"' has array syntax -->
+      <input type="checkbox" name="features[]" value="informational" <?php
+        if (isset($_POST['features']) && in_array('informational', $features)) echo 'checked = "checked"'; ?>>Informational Website
     </li>
     <li>
-      <input type="checkbox" name="wines[]" value="merlot" <?php
-        if (isset($_POST['wines']) && in_array('merlot', $wines)) echo 'checked = "checked" '; ?>>Merlot
+      <input type="checkbox" name="features[]" value="store" <?php
+        if (isset($_POST['features']) && in_array('store', $features)) echo 'checked = "checked" '; ?>>Online Store
     </li>
     <li>
-      <input type="checkbox" name="wines[]" value="syrah" <?php 
-        if (isset($_POST['wines']) && in_array('syrah', $wines)) echo 'checked = "checked" '; ?>>Syrah
-    </li>
-    <li>
-      <input type="checkbox" name="wines[]" value="malbec" <?php
-        if (isset($_POST['wines']) && in_array('malbec', $wines)) echo 'checked = "checked" '; ?>>Malbec
+      <input type="checkbox" name="features[]" value="mobile" <?php 
+        if (isset($_POST['features']) && in_array('mobile', $features)) echo 'checked = "checked" '; ?>>Mobile
     </li>
   </ul>
-  <span class="error"><?= $wines_err ?></span>
+  <span class="error"><?= $features_err ?></span>
 
-  <label>Region</label>
-  <select name="regions">
-    <option value="" NULL <?php 
-      if (isset($_POST['regions']) && $_POST['regions'] == NULL) echo 'selected = "unselected" '; ?>>Select one</option>
-    <option value="nw" <?php
-      if (isset($_POST['regions']) && $_POST['regions'] == 'nw') echo 'selected = "selected" '; ?>>Northwest</option>
-    <option value="sw" <?php 
-      if (isset($_POST['regions']) && $_POST['regions'] == 'sw') echo 'selected = "selected" '; ?>>Southwest</option>
-    <option value="mw" <?php 
-      if (isset($_POST['regions']) && $_POST['regions'] == 'mw') echo 'selected = "selected" '; ?>>Midwest</option>
-    <option value="se" <?php 
-      if (isset($_POST['regions']) && $_POST['regions'] == 'se') echo 'selected = "selected" '; ?>>Southeast</option>
-    <option value="ne" <?php
-      if (isset($_POST['regions']) && $_POST['regions'] == 'ne') echo 'selected = "selected" '; ?>>Northeast</option>
-  </select>
-  <span class="error"><?= $regions_err ?></span>
-
-  <label>Comments</label>
+  <label>Comments:</label>
   <textarea name="comments"><?php
     if (isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']); ?></textarea>
   <span class="error"><?= $comments_err ?></span>

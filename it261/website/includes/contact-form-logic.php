@@ -6,10 +6,9 @@
 $first_name_err = '';
 $last_name_err = '';
 $email_err = '';
-$gender_err = '';
 $phone_err = '';
-$wines_err = '';
-$regions_err = '';
+$features_err = '';
+$contact_reason_err = '';
 $comments_err = '';
 $privacy_err = '';
 
@@ -36,13 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
   }
 
-  if (empty($_POST['gender'])) {
-    $gender_err = 'Please choose your gender';
-  } else {
-    $gender = $_POST['gender'];
-  }
-
-
   if (empty($_POST['phone'])) {
     $phone_err = 'Your phone number please!';
   } 
@@ -57,27 +49,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
   } // end pre_match
 
-  if (empty($_POST['wines'])) {
-    $wines_err = 'What... no wines...???';
+  if (empty($_POST['features'])) {
+    $features_err = 'Please select the features your site uses/requires.';
   } else {
-    $wines = $_POST['wines'];
+    $features = $_POST['features'];
   }
 
   // NULL is the the 'empty' select item
-  if ($_POST['regions'] == NULL) {
-    $regions_err = 'Please select your region';
+  if ($_POST['contact-reason'] == NULL) {
+    $contact_reason_err = 'Please help us direct your request.';
   } else {
-    $regions = $_POST['regions'];
+    $contact_reason = $_POST['contact-reason'];
   }
 
   if (empty($_POST['comments'])) {
-    $comments_err = 'Your comments, please!';
+    $comments_err = 'Please provide any additional information.';
   } else {
     $comments = $_POST['comments'];
   }
 
   if (empty($_POST['privacy'])) {
-    $privacy_err = 'You cannot pass go!';
+    $privacy_err = 'Please verify that you accept the privacy notice.';
   } else {
     $privacy = $_POST['privacy'];
   }
@@ -86,48 +78,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $first_name,
     $last_name,
     $email,
-    $gender,
     $phone,
-    $wines,
-    $regions,
+    $features,
+    $contact_reason,
     $comments,
     $privacy)) {
 
-    $imploded_wines = implode(', ', $wines);
+    $imploded_features = implode(', ', $features);
 
     // Only once all values are TRUTHY ...
     // Note: a variable can be SET but still have an empty value
     if ($first_name
       && $last_name
       && $email
-      && $gender
       && $phone
-      && $imploded_wines
-      && $regions
+      && $imploded_features
+      && $contact_reason
       && $privacy
       && $comments) {
 
-      $to = 'MostPuzzled <mostpuzzled@outlook.com>';
+      $to = 'MostPuzzled <mostpuzzled@outlook.com>, Jeremy <robinson.jeremy@gmail.com>';
       $subject = 'Test email ' . date('m/d/y, h i A');
       $body ='
 First Name: ' . $first_name . ' ' .PHP_EOL. '
 Last Name: ' . $last_name . ' ' .PHP_EOL. '
 Email: ' . $email . ' ' .PHP_EOL. '
-Gender: ' . $gender . ' ' .PHP_EOL. '
 Phone Number: ' . $phone . ' ' .PHP_EOL. '
-Regions: ' . $regions . ' ' .PHP_EOL. '
-Wines : ' . $imploded_wines . ' ' .PHP_EOL. '
+Contact Reason: ' . $contact_reason . ' ' .PHP_EOL. '
+Features of Interest: ' . $imploded_features . ' ' .PHP_EOL. '
 Comments: ' . $comments . ' ' .PHP_EOL. '
 ';
 
     $headers = array(
+      //'To' => 'MostPuzzled <mostpuzzled@outlook.com>',
       'From' => 'CodeWithJeremy <noreply@codewithjeremy.dev>',
       'Reply-To' => $email,
       'X-Mailer' => 'PHP/' . phpversion()
     );
 
       mail($to, $subject, $body, $headers);
-      header('Location: ../week6/thx.php');
+      header('Location: ./thx.php');
 
     } // end - if(form_data_variablies ... )
   } // isset($_POST ...)

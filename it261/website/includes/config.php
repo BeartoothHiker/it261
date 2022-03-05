@@ -211,6 +211,3 @@ switch ($aircraft_make) {
     );
     break;
   }
-  
-
-?>
