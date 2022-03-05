@@ -8,9 +8,11 @@ include('includes/header.php');
 
   <div id="wrapper">
     <main>
-      <?php echo "<h2>$headline</h2>"; ?>
+      <h2><?php echo $headline; ?></h2>
     </main>
     <aside>
+      <h3>Additional Info</h3>
+      <p>Information about the gallery</p>
     </aside>
   </div> <!-- end wrapper -->
 

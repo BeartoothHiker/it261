@@ -8,8 +8,7 @@ include('includes/header.php');
   <div id="wrapper">
 
     <main>
-
-<?php echo "<h2>$headline</h2>"; ?>
+      <h2><?php echo $headline; ?></h2>
 <?php include('./includes/contact-form.php'); ?>
 
     </main> <!-- end main-->
