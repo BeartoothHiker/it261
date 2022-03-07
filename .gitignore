@@ -6,5 +6,6 @@
 
 #ignore credentials PHP
 credentials.php
+sql.txt
 
 adminer-4.8.1.php

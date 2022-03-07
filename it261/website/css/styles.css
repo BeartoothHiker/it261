@@ -253,3 +253,7 @@ textarea {
   max-width: 250px;
   height: auto;
 }
+
+.gallery-caption{
+  margin: 5px 0 20px;
+}

@@ -7,7 +7,7 @@ include('includes/header.php');
 
   <div id="wrapper">
     <h2><?php echo $headline; ?></h2>
-    <p>Your Seattle Public Library card offers a number of benefits you might not expect.  You can access services including online publications and traing services. Additionally it includes free music and vido streaming services, and busuiness and financial research resources.  Your Library helps you get free admission to participating Seattle museums. Enjoy exhibits on aviation, nature, science, and industry—all for free! Have a favorite museum you’d like to revisit? You can reserve one pass to a museum once every 30 days from the date of your visit.</p>
+    <p>A Seattle Public Library card provides benefits that may surprise you.  You can access online online publications and education/training services. Additionally it access free music and video streaming services, and business/financial research resources.  The SPL provides you free admission to participating Seattle museums. Enjoy exhibits on aviation, nature, science, and industry—all for free! Have a favorite museum you’d like to revisit? You can reserve one pass to a museum once every 30 days from the date of your visit.</p>
     <table>
 
 <?php

@@ -344,31 +344,26 @@ Comments: ' . $comments . ' ' .PHP_EOL. '
 // Random photo logic
 //
 
-$photos_formation[0] = 'photo0';
-$photos_formation[1] = 'photo1';
-$photos_formation[2] = 'photo2';
-$photos_formation[3] = 'photo3';
-$photos_formation[4] = 'photo4';
-$photos_formation[5] = 'photo5';
+$photos_formation[0] = 'photo0_Author and \'Tigger\' in preparing to land in Yakima.';
+$photos_formation[1] = 'photo1_Photo from #3 in a four ship fingertip formation.';
+$photos_formation[2] = 'photo2_Two Mooneys flying fingertip formation over Pendleton.';
+$photos_formation[3] = 'photo3_\'Clippy\' over Crater Lake, Oregon.';
+$photos_formation[4] = 'photo4_Beech Bonanza in echelon formation over Pendleton, OR.';
+$photos_formation[5] = 'photo5_\'Fugawi\' joining up after takeoff at Astoria, OR.';
 
-$index_prev = 0;
 function random_images($photo_list)
 {
-  global $index_prev;
   $count = sizeof($photo_list);
+  $index = rand(0, $count-1);
 
-  // NOTE: Update the in-class algorithim FROM picking a new INDEX [0, n-1) 
-  //       TO picking an INCREMENT of [1, n-1), where n=count items.  This
-  //       will make sure the photo always changes.
-  $index = ($index_prev + rand(1, $count-1)) % $count;
-
-  // Save index in global for next iteration
-  $index_prev = $index;
-
-  $selected_base = $photo_list[$index];
+  $photo_info = $photo_list[$index];
+  $sepIndex = strpos($photo_info, "_");
+  
+  $selected_base = substr($photo_info, 0, $sepIndex);
   $selected_image = $selected_base . '.jpg';
+  $selected_caption = substr($photo_info, $sepIndex+1);
 
-  return '<img src="' . './images/' . $selected_image . '" alt="'. $selected_base .'">';
+  return '<img src="' . './images/' . $selected_image . '" alt="'. $selected_base .'"><div class="gallery-caption">'.$selected_caption.'</div>';
 }
 
 //
@@ -376,7 +371,7 @@ function random_images($photo_list)
 //
 
 $services["SPL Museum Pass"] = [
-  'description' => 'The Seattle Public Library helps you get free admission to participating Seattle museums. Enjoy exhibits on aviation, nature, science, and industry—all for free! Have a favorite museum you’d like to revisit? You can reserve one pass to a museum once every 30 days from the date of your visit.\n\nMuseum Pass includes entrance to: Burke Museum, Museum of Flight, MOHAI, Museum of Pop Culture, Nordic Museum,  Seattle Aquarium, and the Wing Luke Museum.',
+  'description' => 'The Seattle Public Library helps you get free admission to participating local museums. Enjoy exhibits on aviation, sciene, nature, and industry for free! Do you have a favorite museum you’d like to revisit? You can reserve one pass to a museum once every 30 days.\n\nMuseum Pass includes entrance to: Burke Museum, Museum of Flight, MOHAI, Museum of Pop Culture, Nordic Museum,  Seattle Aquarium, and the Wing Luke Museum.',
   'logo' => './images/gallery/spl-museum-pass.png',
   'image' => './images/gallery/seattle-museums.jpg'];
 $services["LinkedIn Learning"] = [
