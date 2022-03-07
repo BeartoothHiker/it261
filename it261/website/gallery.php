@@ -38,4 +38,3 @@ foreach($services as $name => $list) :
 
 <?php
 include('includes/footer.php');
-?>
