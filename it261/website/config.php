@@ -375,7 +375,7 @@ function random_images($photo_list)
 // Gallery Images
 //
 
-$services["SPL Museum Passes"] = [
+$services["SPL Museum Pass"] = [
   'description' => 'The Seattle Public Library helps you get free admission to participating Seattle museums. Enjoy exhibits on aviation, nature, science, and industry—all for free! Have a favorite museum you’d like to revisit? You can reserve one pass to a museum once every 30 days from the date of your visit.\n\nMuseum Pass includes entrance to: Burke Museum, Museum of Flight, MOHAI, Museum of Pop Culture, Nordic Museum,  Seattle Aquarium, and the Wing Luke Museum.',
   'logo' => './images/gallery/spl-museum-pass.png',
   'image' => './images/gallery/seattle-museums.jpg'];

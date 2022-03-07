@@ -24,10 +24,10 @@ foreach($services as $name => $list) :
 ?>
       <tr>
         <td><div class="list-key">
-          <h3><?=$name?></h3><div><img class="list-logo" src="<?=$logo_path?>"></div>
+          <h3><?=$name?></h3><div><img class="list-logo" src="<?=$logo_path?>" alt="<?=$name?> logo"></div>
         </div></td>
         <td><?=$description?></td>
-        <td><img class="list-image" src="<?=$image_path?>"></td>
+        <td><img class="list-image" src="<?=$image_path?>" alt="<?=$name?> image"></td>
       </tr>
 <?php endforeach; ?>
 
