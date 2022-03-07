@@ -48,7 +48,7 @@ switch(THIS_PAGE) {
   case 'gallery.php':
     $title = 'JeremyRo\'s Gallery';
     $body_class = 'gallery inner'; // class
-    $headline = 'Photo Gallery Project';
+    $headline = 'Beyond Books: Seattle Public Library Card Benefits';
     break;
 
   case 'thx.php':
@@ -351,15 +351,51 @@ $photos_formation[3] = 'photo3';
 $photos_formation[4] = 'photo4';
 $photos_formation[5] = 'photo5';
 
+$index_prev = 0;
 function random_images($photo_list)
 {
-  $my_return = '';
+  global $index_prev;
   $count = sizeof($photo_list);
-  $i = rand(0, $count-1);
 
-  $selected_base = $photo_list[$i];
+  // NOTE: Update the in-class algorithim FROM picking a new INDEX [0, n-1) 
+  //       TO picking an INCREMENT of [1, n-1), where n=count items.  This
+  //       will make sure the photo always changes.
+  $index = ($index_prev + rand(1, $count-1)) % $count;
+
+  // Save index in global for next iteration
+  $index_prev = $index;
+
+  $selected_base = $photo_list[$index];
   $selected_image = $selected_base . '.jpg';
-  $my_return = '<img src="' . './images/' . $selected_image . '" alt="'. $selected_base .'">';
-  
-  return $my_return;
+
+  return '<img src="' . './images/' . $selected_image . '" alt="'. $selected_base .'">';
 }
+
+//
+// Gallery Images
+//
+
+$services["SPL Museum Passes"] = [
+  'description' => 'The Seattle Public Library helps you get free admission to participating Seattle museums. Enjoy exhibits on aviation, nature, science, and industry—all for free! Have a favorite museum you’d like to revisit? You can reserve one pass to a museum once every 30 days from the date of your visit.\n\nMuseum Pass includes entrance to: Burke Museum, Museum of Flight, MOHAI, Museum of Pop Culture, Nordic Museum,  Seattle Aquarium, and the Wing Luke Museum.',
+  'logo' => './images/gallery/spl-museum-pass.png',
+  'image' => './images/gallery/seattle-museums.jpg'];
+$services["LinkedIn Learning"] = [
+  'description' => 'Learn a new skill at your own pace, with thousands of courses covering animation, business skills, marketing, design, photography, programming and much more.',
+  'logo' => './images/gallery/linked-in-learning-square.jpg',
+  'image' => './images/gallery/linkedinlearning.webp'];
+$services["O'Reilly Complete"] = [
+  'description' => 'Online access to Business, Software, and Programming Books.\nAccess online anytime, with no due dates, or print pages for offline access.',
+  'logo' => './images/gallery/oreilly-logo-2.jpg',
+  'image' => './images/gallery/oreilly-books-.jpg'];
+$services["Kanopy"] = [
+  'description' => 'Enjoy Thoughtful Entertainment.\nStream thousands of films for free.',
+  'logo' => './images/gallery/kanopy-icon.svg',
+  'image' => './images/gallery/kanopy_3_full_trunc.jpg'];
+$services["Libby"] = [
+  'description' => "Thousands of ebooks, audiobooks, magazines, and more - hand-selected by your public library - are available for free. From NYT best-sellers to classics, you're sure to find something great to read!",
+  'logo' => './images/gallery/libby.svg',
+  'image' => './images/gallery/libby-header-splash3.webp'];
+$services["Morningstar Investment Research"] = [
+  'description' => 'Get up-to-date information about stocks, funds and other investment options, plus calculators and tools to help you manage your portfolio.',
+  'logo' => './images/gallery/morningstar.jpg',
+  'image' => './images/gallery/morningstar-website.jpg'];

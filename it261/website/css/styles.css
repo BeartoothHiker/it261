@@ -241,3 +241,15 @@ textarea {
   background:#353;
   color:beige;
 }
+
+/* Gallery Page styles */
+
+.list-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.list-image {
+  max-width: 250px;
+  height: auto;
+}
