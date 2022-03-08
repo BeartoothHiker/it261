@@ -1,0 +1,54 @@
+/* styles for week8 people pages */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: beige;
+}
+
+#wrapper {
+  max-width: 1200px;
+  /* still be using values for 940 pixel grid
+     (I am not sure why 940?? ) */
+  margin: 20px auto;
+  background: lightcyan;
+}
+
+.inner {
+  max-width: 1200px;
+  /* still be using values for 940 pixel grid
+     (I am not sure why 940?? ) */
+  margin: 0 auto;
+}
+
+main {
+  float: left;
+  /* grid is based on a 940 px grid */
+  /*main in px: 580px */
+  /*change to percentages (580/940) ~61.7% */
+  width: 62%;
+  background: pink;
+}
+
+aside {
+  /* aside will be 340 px wide (+ 20px gutter)*/
+  float: right;
+  /* 340/940 = 36.2 % */
+  width: 36%;
+  background: tan;
+}
+
+footer {
+  clear: both;
+  height: 60px;
+  line-height: 60px;
+}
+
+footer li {
+  list-style-type: none;
+  float: left;
+  margin-right: 30px;
+}
