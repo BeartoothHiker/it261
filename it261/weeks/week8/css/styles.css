@@ -14,7 +14,6 @@ body {
   /* still be using values for 940 pixel grid
      (I am not sure why 940?? ) */
   margin: 20px auto;
-  background: lightcyan;
 }
 
 .inner {
@@ -30,7 +29,6 @@ main {
   /*main in px: 580px */
   /*change to percentages (580/940) ~61.7% */
   width: 62%;
-  background: pink;
 }
 
 aside {
@@ -38,7 +36,14 @@ aside {
   float: right;
   /* 340/940 = 36.2 % */
   width: 36%;
-  background: tan;
+  text-align: center;
+}
+
+aside img {
+  /* Center image in aside */
+  display: block;
+  /* add space below image for text */
+  margin: 0 auto 10px;
 }
 
 footer {
@@ -51,4 +56,32 @@ footer li {
   list-style-type: none;
   float: left;
   margin-right: 30px;
+}
+
+
+main ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+p {
+  /*LH  depends on font family ~ in range of 1.5 */
+  line-height: 1.4;
+}
+
+h1 {
+  /* if you want to make big*/
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
 }

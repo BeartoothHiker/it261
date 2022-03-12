@@ -1,7 +1,10 @@
 <?php
 
-// We may need this for the emailable form
+// We *may* need this, if we we have header errors
 // ob_start();
+
+define('DEBUG', 'TRUE');      // We want to see our errors
+//include('credentials.php');   // DB Credentials
 
 //
 // Site Navigation

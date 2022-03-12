@@ -59,6 +59,7 @@ nav a {
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
+/* daily page */
 .daily-detail h1 {
   padding: 10px 10px 5px;
 }
@@ -90,6 +91,11 @@ aside {
 }
 
 aside img {
+  max-width: 100%;
+  height: auto;
+}
+
+main img {
   max-width: 100%;
   height: auto;
 }
