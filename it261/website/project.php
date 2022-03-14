@@ -1,19 +1,67 @@
 <?php
 include('config.php');
 include('includes/header.php');
+
+$sql = 'SELECT * FROM `games`';
+if(isset($_GET['order'])) {
+  // Add 'order by' clause based on query string
+  $orderBy='';
+  $query_mod = $_GET['order'];
+  if ($query_mod === 'type') {
+    $orderBy = 'ORDER BY `type`';
+  }
+  if ($query_mod === 'age') {
+    $orderBy = ' ORDER BY `suggested_min_age`;';
+  }
+  $sql .= $orderBy;
+}
 ?>
   <!-- Space after header  -->
   <div id="wrapper-buffer"></div>
 
   <div id="wrapper">
     <main>
-      <h2><?php echo $headline; ?></h2>
-      <p>Lucas ipsum dolor sit amet bertroff fortuna alderaan veers kashyyyk massans shimrra sneevel piell kaminoan. X2 tyranus bib billaba gamorr iridonian vaathkree gizka. Yavin lars zann tapani kessel cliegg mace. Jax rugor fisto teek saffa frozarns kaleesh neimoidia. Yuzzem valorum koon jamillia ima-gun kenobi. Fey'lya chistori iktotchi skywalker su sy nal grodin. D8 fisto bormea falleen lah sio klatooinian anakin ponda. Dashade theelin antonio chewbacca ben ablajeck skywalker shaak. Drach'nam quadrinaros aqualish sullustan maximilian nunb naberrie.</p>
+      <h1><?php echo $headline; ?></h1>
+
+      <?php
+  $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,  DB_NAME)
+  or die(myError(__FILE__,__LINE__,mysqli_connect_error()));
+
+  $result = mysqli_query($iConn, $sql)
+  or die(myError(__FILE__,__LINE__,mysqli_error($iConn)));
+
+  if (mysqli_num_rows($result) > 0) {
+
+    while ($row = mysqli_fetch_assoc($result)) {
+
+      // Output results.
+echo '
+<h2>' . $row['name'] . '</h2>
+<ul>
+<li><b>Game category: </b>' . $row['type'] .'</li>
+<li><b>Best for players: </b>' . $row['suggested_min_age'] .'+</li>
+<li><b>Blurb: </b>Quick one line description</li>
+</ul>
+<p>Link for more information about <a href="./project-view.php?id='. $row['game_id'] . '">' . $row['name'] . '</a></p>
+';
+    }
+  }
+?>
     </main> <!-- end main-->
+
+    <aside>
+      <h3>TODO: Title/description</h3>
+      <div class="image-aside">
+        <?php echo random_image_tag($game_images, './images/project'); ?>    
+      </div>
+    </aside>
+
   </div> <!-- end wrapper -->
 
   <div id="footer-clear"></div>
-
 <?php
-include('includes/footer.php');
-?>
+// Release result/connection and swallow errors (@)
+@mysqli_free_result($result);
+@mysqli_close($iConn);
+
+include('./includes/footer.php');

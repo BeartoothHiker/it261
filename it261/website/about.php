@@ -11,7 +11,7 @@ include('includes/header.php');
       <p></p>
       <h2 class="">Project Database Schema</h2>
       <div class="project-image">
-        <img src="./images/project/db-game-table.jpg">
+        <a href="../adminer-4.8.1.php"><img src="./images/project/db-game-table.jpg"></a>
       </div>  
     </main> <!-- end main-->
   </div> <!-- end wrapper -->

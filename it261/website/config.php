@@ -3,8 +3,30 @@
 // We *may* need this, if we we have header errors
 // ob_start();
 
+//
+// Error Handling
+//
+
 define('DEBUG', 'TRUE');      // We want to see our errors
-//include('credentials.php');   // DB Credentials
+
+function myError($myFile, $myLine, $errorMsg)
+{
+if(defined('DEBUG') && DEBUG)
+{
+ echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+}
+
+//
+// Database
+//
+include('./includes/credentials.php');   // DB Credentials
+
 
 //
 // Site Navigation
@@ -24,6 +46,7 @@ switch(THIS_PAGE) {
      $body_class = 'home';  // class
      $headline = 'Welcome to the Home Page';
      break;
+
   case 'daily.php':
     $title = 'JeremyRo\'s Daily Page';
     $body_class = 'daily inner'; // class
@@ -37,9 +60,15 @@ switch(THIS_PAGE) {
     break;
 
   case 'project.php':
-    $title = 'JeremyRo\'s Project Page';
-    $body_class = 'project inner'; // class
-    $headline = 'TODO:';
+    $title = 'Favorite Games Page';
+    $body_class = 'games inner'; // class
+    $headline = 'Fun Games for All Ages';
+    break;
+
+  case 'project-view.php':
+    $title ='Game Information';
+    $body_class = 'games inner';
+    $headline = 'Game Information';
     break;
 
   case 'contact.php':
@@ -57,7 +86,7 @@ switch(THIS_PAGE) {
   case 'thx.php':
     $title = 'Thank you Page';
     $body_class = "inner";
-    $headline = 'Thank you for contacting us!';
+    $headline = 'Thank Uou for Contacting Us!';
     break;
 }
 
@@ -88,7 +117,6 @@ function make_nav_links($nav_array) {
 
   return $return_val;
 } // end function
-
 
 //
 // Daily Config File info
@@ -233,7 +261,6 @@ $contact_reason_err = '';
 $comments_err = '';
 $privacy_err = '';
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Copy form data from $_POST superglobal into variables, or generate errors
@@ -367,6 +394,48 @@ function random_images($photo_list)
   $selected_caption = substr($photo_info, $sepIndex+1);
 
   return '<img src="' . './images/' . $selected_image . '" alt="'. $selected_base .'"><div class="gallery-caption">'.$selected_caption.'</div>';
+}
+
+$washigton_images = array(
+  'fdr-memorial.jpg',
+  'lincoln-memorial.jpg', 
+  'mlk-memorial.png', 
+  'washington-monument-whitehouse.jpg');
+
+$game_images = array(
+  '640px-Board_game_on_the_floor_at_Grythengen_farm.jpg',
+  '640px-Games_and_Puzzles.jpg',
+  '640px-Le_jeu_de_lansquenet_BnF.jpg',
+  '640px-Playing__igisoro_at_night_in_an_artists_studio.jpg',
+  '640px-Pyrkon_2019_KeyForge_card_game.jpg',
+  'Board_game_pieces.jpg',
+  'Board_games_in_a_Korean_hypermarket.jpg',
+  'Card_143_big.jpg',
+  'Card_Game_19.jpg',
+  'Castles_of_Burgundy_Board_Game.jpg',
+  'Metal_chess_set.jpg',
+  'Picture_of_a_Draft_Board.jpg',
+  'Sequence_card_game.jpg'
+);
+
+function random_image_tag($photo_list, $folder_path = '')
+{
+    // find random photo
+  $len = count($photo_list);
+  $i = rand(0, $len-1);
+  $selected_image = $photo_list[$i];
+
+  // append path/folder if exists
+  if (!empty($folder_path)) {
+      // ensure there is a (single) trailing slash
+      $image_path = rtrim($folder_path, '/') . '/';
+  }
+  $image_path .= $selected_image;
+
+  // trim extension for ALT
+  $alt = pathinfo($selected_image, PATHINFO_FILENAME);
+
+  return '<img src="' . $image_path . '" alt="'. $alt .'">';
 }
 
 //

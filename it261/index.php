@@ -36,7 +36,7 @@
       </div>
       <h2>Adminer Install - MySQL</h2>
       <div>
-        <img class="mamp-image" alt="Adminer Installed" src="images/adminer-db-table.jpg">
+        <a href="./adminer-4.8.1.php"><img class="mamp-image" alt="Adminer Installed" src="images/adminer-db-table.jpg"></a>
       </div>
       <h2>MAMP Installation</h2>
       <div>
