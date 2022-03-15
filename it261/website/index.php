@@ -6,8 +6,8 @@ include('includes/header.php');
   <div id="wrapper-buffer"></div>
 
   <div id="wrapper">
-    <div id="hero">
-    </div> <!-- end hero  -->
+    <!-- <div id="hero">
+    </div> --> <!-- end hero  -->
 
     <main>
       <?php echo "<h2>$headline</h2>"; ?>

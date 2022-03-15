@@ -1,4 +1,4 @@
-  <footer>
+  <footer class="header-footer">
     <div id="inner-footer">
       <ul>
         <li>Copyright &copy;

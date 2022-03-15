@@ -1,3 +1,17 @@
+:root {
+  --prussian-blue: #0B3C5D;
+  --sky-blue: #328CC1;
+  --gold: #D9B310;
+  --blackish: #1D2731;
+  --whitish: #ddd;
+
+  --banner-footer: var(--prussian-blue);
+  --hero: var(--gold);
+  --background: var(--whitish); 
+  --main: var(--gold);
+  --footer: var(--sky-blue);
+}
+
 /* Styles for CSS */
 * {
   padding: 0;
@@ -6,12 +20,12 @@
 }
 
 body {
-  background: #ddd;
+  background: var(--background);
 }
 
 header {
   /* height: 200px; */
-  background: yellow;
+  background: var(--banner-footer);
   overflow: hidden; /*why */
   padding: 20px 0;
 }
@@ -22,11 +36,24 @@ header {
   max-width: 1200px;
 }
 
-/* Style for current item on Page navigation menu */
-.current {
-  color: red;
+.header-footer a:link {
+  color: var(--whitish);
+  text-decoration: none;
 }
 
+.header-footer a:visited {
+  color: var(--whitish);
+}
+/* mouse over link */
+.header-footer a:hover {
+  color: var(--sky-blue);
+  text-decoration: underline;
+}
+
+/* selected link */
+.header-footer a.current {
+  color: var(--gold);
+}
 
 #logo {
   float: left;
@@ -42,10 +69,6 @@ nav li {
   float: left;
   margin-left: 15px;
   list-style-type: none;
-}
-
-nav a {
-  text-decoration: none
 }
 
 #wrapper-buffer {
@@ -71,7 +94,7 @@ nav a {
 
 #hero {
   height: 100px;
-  background: #f00;
+  background: var(--hero);
   margin-bottom: 20px;
   clear:both;
 }
@@ -80,7 +103,7 @@ main {
   width: 63%;
   /* height: 400px; */
   padding: 5px;
-  background: lightblue;
+  background: var(--main);
   margin-bottom: 20px;
   float: left;
 }
@@ -100,6 +123,12 @@ main img {
   height: auto;
 }
 
+main ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
 #footer-clear {
   clear: both;
 }
@@ -107,7 +136,7 @@ main img {
 footer {
   border-top: 1px solid #777;
   border-bottom: 1px solid #444;
-  background: #bbb;
+  background: var(--banner-footer);
   height: 80px;
   line-height: 50px; /* center vertically */
 }
@@ -116,6 +145,36 @@ footer li {
   float:left;
   margin-right: 30px;
   list-style-type: none;
+  color: var(--whitish);
+}
+
+/* Project styles -- some should be generic */
+
+main ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+p {
+  /*LH  depends on font family ~ in range of 1.5 */
+  line-height: 1.4;
+}
+
+h1 {
+  /* if you want to make big*/
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
 }
 
 /* Contact styles */
@@ -218,6 +277,7 @@ textarea {
   list-style-type: none;
 }
 
+/* Aircraft specific random pages for daily */
 .socata {
   background:#1391CC;
   color:beige;

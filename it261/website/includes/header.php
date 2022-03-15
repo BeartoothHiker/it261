@@ -9,7 +9,7 @@
 </head>
 
 <body class="<?php echo $body_class ?>">
-  <header>
+  <header class="header-footer">
     <div id="inner-header">
       <a href="index.php">
         <img id="logo" src="images/New-Mooney-Logo-Flipped.png" alt="Mooney Logo">
